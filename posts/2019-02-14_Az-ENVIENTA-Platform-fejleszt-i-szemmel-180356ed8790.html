@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Az ENVIENTA Platform fejlesztői szemmel</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Az ENVIENTA Platform fejlesztői szemmel</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+decentralizált hardver tudásbázis
+</section>
+<section data-field="body" class="e-content">
+<section name="e0b3" class="section section--body section--first"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="b8d9" id="b8d9" class="graf graf--h3 graf--leading graf--title">Az ENVIENTA Platform fejlesztői szemmel</h3><h4 name="7794" id="7794" class="graf graf--h4 graf-after--h3 graf--subtitle">decentralizált hardver tudásbázis</h4><p name="9b88" id="9b88" class="graf graf--p graf-after--h4">Sokszor írtunk már az ENVIENTA Platformról mint az ENVENTA projekt központi eleméről, de mindig csak nagy vonalakban beszéltünk róla. Ebben a cikkben megpróbálom kicsit fejlesztői szemmel körbejárni a témát amolyan kérdés-válasz formában. Fontos megjegyezni, hogy a projekt még erősen fejlesztési fázisban van, így még minden képlékeny, bármi változhat. A lentebb írtak főként az általam elképzelt irányt képviselik.</p><h3 name="06e0" id="06e0" class="graf graf--h3 graf-after--p">Mi az ENVIENTA Platform?</h3><p name="3b7f" id="3b7f" class="graf graf--p graf-after--h3">Az ENVIENTA Platform célja, hogy összekösse a termékfejlesztés minden résztvevőjét (feltalálókat, vevőket, gyártókat, stb.), és végigsegítse a nyílt forrású projekteket az ötlettől a finanszírozáson át egészen a gyártásig. Úgy hisszük, hogy egy ilyen platform nagyban segítheti és gyorsíthatja az innovációt, és segíthet megoldást találni olyan égető problémákra, mint az éghajlatváltozás vagy a vízkrízis.</p><blockquote name="bf90" id="bf90" class="graf graf--blockquote graf-after--p">Az ENVIENTA Platform nem egy szoftver, hanem egy több szoftver elemből álló szoftver ökoszisztéma. Az egyes elemek laza módon kapcsolódnak, és a célunk, hogy a rendszer hosszú távon teljesen decentralizált módon, a közösség által fejlesztve és üzemeltetve működjön.</blockquote><h3 name="c75c" id="c75c" class="graf graf--h3 graf-after--blockquote">Hogyan épül fel az ENVIENTA Platform?</h3><p name="cf75" id="cf75" class="graf graf--p graf-after--h3">Az ENVIENTA Platform minden egyes projektje egy Git tároló. Amikor a projekt oldalát böngésszük, akkor erre a Git tárolóra húzunk egy mindenki számára könnyen értelmezhető és kezelhető felületet. A felület segítségével komolyabb informatikai tudás nélkül bárki indíthat új projektet, vagy csatlakozhat már meglévő projektekhez.</p><figure name="dce3" id="dce3" class="graf graf--figure graf-after--p"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 394px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 56.3%;"></div><img class="graf-image" data-image-id="1*DFuHHZjMsir41IrGXxXypg.png" data-width="1600" data-height="900" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*DFuHHZjMsir41IrGXxXypg.png"></div><figcaption class="imageCaption"><a href="http://platform.envienta.org/" data-href="http://platform.envienta.org/" class="markup--anchor markup--figure-anchor" rel="nofollow noopener" target="_blank">http://platform.envienta.org/</a></figcaption></figure><p name="75c9" id="75c9" class="graf graf--p graf-after--figure">A Git maga eleve decentralizált. Valójában nem létezik olyan, hogy magasabb rendű, vagy központi tároló, csak a tárolók közötti szinkronizáció (push/pull). Azt, hogy melyik Git tárolót fogadjuk el aktuális változatnak, a fejlesztők közötti megegyezés határozza meg. Amikor a platformon valaki létrehoz egy projektet, egy ilyen Git tároló fog létrejönni számára, amit az ENVIENTA szerverei tárolnak. A tervek közt szerepel, hogy ezeket a tárolókat IPFS-be (és esetleg Swarm-ba) is publikáljuk. Ez valójában nem a decentralizáltságot növeli, hanem azt, hogy ha szükségünk van egy tároló tartalmára, azt megtalálhassuk. A fentiekből látszik tehát, hogy az ENVIENTA szerverén tárolt változatnak nem lesz kitüntetett szerepe, a rendszer valóban decentralizált.</p><h3 name="3990" id="3990" class="graf graf--h3 graf-after--p">Hogy jön a képbe a blokklánc?</h3><p name="149e" id="149e" class="graf graf--p graf-after--h3">Ha valaki létrehoz egy projektet, azt az Ethereum blokkláncra publikálhatja. Ennek több célja is van. Egyfelől mivel a projekt tárolás decentralizált (akár több ENVIENTA-hoz hasonló tároló is futhat az ökoszisztémában), ezért a blokklánc az a központi hely, ami egy egységes nyilvántartást jelent a projektekhez. Ilyen szempontból a projektek regisztrálására szolgáló okosszerződés hasonló az Ethereum ENS névszolgáltatásához, azzal a különbséggel, hogy itt nem csak név szerint tesszük kereshetővé a projekteket, hanem tartalom alapján is. A regisztrációs bejegyzések figyelésével és indexelésével kereső építhető, amelynek segítségével az egész ökoszisztémában megtalálhatóak a projektek, az IPFS-nek köszönhetően még akkor is, ha azok csak a felhasználók gépén találhatóak meg. Ilyen szempontból talán még a torrent trackerekhez hasonlítható a rendszer, ahol a központi tároló csak a tartalmak elérhetőségét tárolja, magát a tartalmat a felhasználók egymástól tudják beszerezni.</p><p name="6968" id="6968" class="graf graf--p graf-after--p">A blokkláncra írás egyfajta időbélyegzésnek is minősül, hiszen bizonyítható általa, hogy egy adott tartalom egy adott időpillanatban létezett, és hogy az adott tartalmat ki publikálta (ki írta a blokkláncra). Ez ugyan önmagában nem helyettesíti a szabadalmaztatás bonyolult és költséges folyamatát, de arra pont elég lehet, hogy egy nyílt forrású terméket ne szabadalmaztathassanak mások, ezzel megbénítva az adott termék terjesztését és fejlődését.</p><p name="9325" id="9325" class="graf graf--p graf-after--p">Ugyancsak a blokkláncon történik a termékek validációja. Ez azt jelenti, hogy az adott projekt kérheti az ENVIENTA minősített validátorait (értékelőit), hogy szakmai szempontból értékeljék a terveket. Ez előfeltétele annak, hogy a termék gyártásba kerülhessen (pl. a gyártók már csak olyan termékek közül válogatnak, amik biztosan működnek, nem veszélyesek, stb.). Ugyancsak a validátorok által ki is tiltható egy termék a platformról, ha az nem összeegyeztethető az ENVIENTA irányelveivel (pl. valaki egy fegyver terveit tölti fel). A validátorok kiválasztása decentralizáltan, reputáció alapon történik, de ennek pontos részletei még kidolgozás alatt állnak.</p><h3 name="50bd" id="50bd" class="graf graf--h3 graf-after--p">Mi a szerepe az ENVIENTA tokennek?</h3><p name="fa3b" id="fa3b" class="graf graf--p graf-after--h3">Az <a href="http://envienta.com/downloads/envienta_white_paper.pdf" data-href="http://envienta.com/downloads/envienta_white_paper.pdf" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">ENVIENTA white paper-ben</a> több use-case-t is meghatároztunk a tokenek felhasználására, de ezek közül a legfontosabb talán a projektek támogatása. Az ENVIENTA nyílt forrás liszensz rendszere még kidolgozás alatt áll, de ennek fontos eleme, hogy ha valaki értékesít egy terméket, az a fair-use jegyében köteles támogatni a terméket kifejlesztő projektet, ez a támogatás pedig ENV tokenek formájában történik. Felfogható ez egyfajta liszensz díjnak, termék adónak, vagy akár kötelező adománynak (donation) is. A díjak fizetéséhez szükséges ENV tokeneket a gyártók kriptotőzsdén tudják beszerezni a tokeneket birtokló felhasználóktól. A projektnek befolyó tokeneket egy projekthez tartozó okoszszerződés osztja el a tagok közt, vagy tárolja egy poolban amiből a projekt továbbfejlesztése finanszírozható. Az így megszerzett tokeneket a tagok tőzsdén keresztül értékesíthetik (nagyrészt a gyártóknak, akik folyamatos keresletet biztosítanak), így zárul be a kör. A tokenek használatával sokkal egyszerűbb az elszámolás (ne feledjük el, hogy egy projekt akár több száz taggal is rendelkezhet a világ minden részén), és mivel az árfolyamot a kereslet és kínálat viszonya határozza meg, független a hagyományos pénzrendszertől.</p><h3 name="3d78" id="3d78" class="graf graf--h3 graf-after--p">Miért PHP alapú portált fejlesztetek egy blokklánc projekt fölé?</h3><p name="e23b" id="e23b" class="graf graf--p graf-after--h3">Ha valaki megnézi az ENVIENTA platform jelenleg elérhető <a href="https://github.com/EnvientaGit/EnvientaPlatform" data-href="https://github.com/EnvientaGit/EnvientaPlatform" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">forráskódját</a>, egy PHP alapú Laravel portált fog találni. Bár a projektet jelenleg egy viszonylag heterogén társaság fejleszti (én pl. elsősorban Java-ban szoktam fejleszteni), azért esett a választás a PHP-ra, mert bárhol hosztolható és könnyen tanulható bárki számára. Hosszú távon azt szeretnénk elérni, hogy az ENVIENTA platform egy igazi közösségi projekt legyen, és bárki (akár egy lelkes Maker vagy felhasználó) hozzátehessen ha akar, erre pedig a PHP a legalkalmasabb. Nem véletlen, hogy a legnépszerűbb CMS és blog rendszerek (pl. WordPress) is PHP-ben íródtak, valamint a Facebook is PHP alapú (bár ők egy módosított változatot használnak).</p><p name="3a2b" id="3a2b" class="graf graf--p graf-after--p">Fontos látni azt is, hogy mivel a platform nem egy konkrét szoftver, hanem egy ökoszisztéma, ezért teljesen nyitott a lehetőség egyéb, alternatív felületek fejlesztésére. Bárki összerakhat egy Ruby, Java, Go, JS, stb. nyelven íródott portált, vagy akár desktop klienst a projektek böngészésére és kezelésére, de végső soron akár egy parancssoros Git kliens és Ethereum kliens használatával is elérhető a teljes funkcionalitás.</p><h3 name="301c" id="301c" class="graf graf--h3 graf-after--p">Hogyan épül fel az ENVIENTA portál modulrendszere?</h3><p name="8004" id="8004" class="graf graf--p graf-after--h3 graf--trailing">Az ENVIENTA portál fejlesztésénél alapvető szempont volt a bővíthetőség, éppen ezért maga a portál csak az alap funkcionalitásra (Git tárolók tartalmának szerkesztése) koncentrál, minden egyéb funkcionalitás modulok formájában érhető el. A modul rendszer működése a Facebook-éhoz hasonló, vagyis minden egyes modul az adott modul szolgáltatójának szerverén fut szeparált módon (szabadon választott szerver környezet és programozási nyelv), és iframe-ben kerül beemelésre a portálra. Az egyes modulok API-kon keresztül kommunikálhatnak a egymással és a portállal. Ennek a felépítésnek köszönhetően minden projekt maga választhatja meg a használni kívánt eszközöket (news feed, issue tracker, chat, projekt management eszközök, stb.).</p></div></div></section><section name="b45c" class="section section--body section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><p name="5fc9" id="5fc9" class="graf graf--p graf--leading graf--trailing">Remélhetőleg a fentiekből mindenki számára körvonalazódott az a fajta decentralizált struktúra, amit az ENVIENTA projekt megvalósítani kíván, és sikerült megindokolni a fejlesztést érintő döntéseinket. Fontos látni, hogy jelenleg még az út elején tartunk, így rengeteg minden kidolgozásra és megvalósításra vár, ennek ellenére már most rendelkezünk egy <a href="http://platform.envienta.org/" data-href="http://platform.envienta.org/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">portállal</a>, ahová bárki feltöltheti a terveit, és nagy erőkkel folynak a további fejlesztések.</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@thebojda" class="p-author h-card">Laszlo Fazekas</a> on <a href="https://medium.com/p/180356ed8790"><time class="dt-published" datetime="2019-02-14T12:40:39.712Z">February 14, 2019</time></a>.</p><p><a href="https://medium.com/@thebojda/az-envienta-platform-fejleszt%C5%91i-szemmel-180356ed8790" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on November 19, 2019.</p></footer></article></body></html>
