@@ -38,6 +38,7 @@ for post in files:
     html = file.read()
     file.close()
     parser.feed(html)
-    readme_file.write('[' + parser.get_title() + '](' + 'posts/' + post + ')\n\n')
+    readme_file.write(
+        '[' + parser.get_title() + '](' + 'https://thebojda.github.io/my-medium-blog/posts/' + post + ')\n\n')
 
 readme_file.close()
