@@ -291,3 +291,11 @@ avagy mobilalkalmazás fejlesztés (nem csak) webfejlesztőknek
 avagy modellek futtatása mobilon, IoT eszközökön és akár mikrokontrollereken
 ](https://thebojda.github.io/my-medium-blog/posts/2020-02-23_Tensorflow-alapoz--8--909a84f7a961.html)
 
+[Vue.js alapozó ](https://thebojda.github.io/my-medium-blog/posts/2020-05-29_Vue-js-alapoz--8be3a4db812d.html)
+
+[Vue Native alapozó 
+avagy natív mobil appok fejlesztése Vue.js-el
+](https://thebojda.github.io/my-medium-blog/posts/2020-06-10_Vue-Native-alapoz--83b0adbe93e2.html)
+
+[Mesterséges intelligenciáról mindenkinek ](https://thebojda.github.io/my-medium-blog/posts/2020-08-11_Mesters-ges-intelligenci-r-l-mindenkinek-e880898685d7.html)
+
