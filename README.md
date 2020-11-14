@@ -299,3 +299,9 @@ avagy natív mobil appok fejlesztése Vue.js-el
 
 [Mesterséges intelligenciáról mindenkinek ](https://thebojda.github.io/my-medium-blog/posts/2020-08-11_Mesters-ges-intelligenci-r-l-mindenkinek-e880898685d7.html)
 
+[Tensorflow alapozó 9: PyTorch alapozó ](https://thebojda.github.io/my-medium-blog/posts/2020-08-24_Tensorflow-alapoz--9--PyTorch-alapoz--ee4e9d98b46b.html)
+
+[Neuralinkről mindenkinek, avagy milyen messze még a MATRIX agy-gép interfésze ](https://thebojda.github.io/my-medium-blog/posts/2020-08-30_Neuralinkr-l-mindenkinek--avagy-milyen-messze-m-g-a-MATRIX-agy-g-p-interf-sze-8a8328405486.html)
+
+[Our Universe Is A Massive Neural Network: Here’s Why | Hacker Noon ](https://thebojda.github.io/my-medium-blog/posts/draft_Our-Universe-Is-A-Massive-Neural-Network--Here-s-Why---Hacker-Noon-e55acf1f197b.html)
+
