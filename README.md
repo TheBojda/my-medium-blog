@@ -303,5 +303,11 @@ avagy natív mobil appok fejlesztése Vue.js-el
 
 [Neuralinkről mindenkinek, avagy milyen messze még a MATRIX agy-gép interfésze ](https://thebojda.github.io/my-medium-blog/posts/2020-08-30_Neuralinkr-l-mindenkinek--avagy-milyen-messze-m-g-a-MATRIX-agy-g-p-interf-sze-8a8328405486.html)
 
+[Our Universe Is A Massive Neural Network: Here’s Why ](https://thebojda.github.io/my-medium-blog/posts/2020-11-01_Our-Universe-Is-A-Massive-Neural-Network--Here-s-Why-e55acf1f197b.html)
+
+[Tensorflow alapozó 10. 
+Neurális hálózatok tenyésztése genetikus algoritmussal PyGAD és OpenAI Gym használatával
+](https://thebojda.github.io/my-medium-blog/posts/2021-01-24_Tensorflow-alapoz--10--24f7767d4a2c.html)
+
 [Our Universe Is A Massive Neural Network: Here’s Why | Hacker Noon ](https://thebojda.github.io/my-medium-blog/posts/draft_Our-Universe-Is-A-Massive-Neural-Network--Here-s-Why---Hacker-Noon-e55acf1f197b.html)
 
