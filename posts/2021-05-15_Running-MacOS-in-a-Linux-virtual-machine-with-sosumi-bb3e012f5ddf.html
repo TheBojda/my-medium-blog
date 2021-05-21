@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Running MacOS in a Linux virtual machine with sosumi</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Running MacOS in a Linux virtual machine with sosumi</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+aka iOS development on Linux
+</section>
+<section data-field="body" class="e-content">
+<section name="7b06" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="6ed8" id="6ed8" class="graf graf--h3 graf--leading graf--title">Running MacOS in a Linux virtual machine with sosumi</h3><h4 name="7df7" id="7df7" class="graf graf--h4 graf-after--h3 graf--subtitle">aka iOS development on Linux</h4><figure name="b8bf" id="b8bf" class="graf graf--figure graf-after--h4"><img class="graf-image" data-image-id="1*IlPi5gCxpR72MYlkRfffdw.png" data-width="1920" data-height="1080" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*IlPi5gCxpR72MYlkRfffdw.png"><figcaption class="imageCaption">MacOS in a Linux VM with sosumi</figcaption></figure><p name="da9b" id="da9b" class="graf graf--p graf-after--figure">If you want to develop iOS applications you have to buy a Mac or alternatively, you can run a MacOS on a virtual machine. Thanks to <a href="https://snapcraft.io/install/sosumi/ubuntu" data-href="https://snapcraft.io/install/sosumi/ubuntu" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">sosumi</a>, running MacOS on Ubuntu (or any other Linux) has never been easier. Sosumi is a snap package that installs a MacOS for you into a qemu virtual machine. With some easy configuration steps, you will get a full-featured iOS development environment on Linux.</p><p name="369a" id="369a" class="graf graf--p graf-after--p">For the first step, install sosumi with snap, and start it:</p><pre name="9967" id="9967" class="graf graf--pre graf-after--p">snap install sosumi<br>sosumi</pre><p name="37fc" id="37fc" class="graf graf--p graf-after--pre">Sosumi will download the MacOS Catalina installer, convert the CD image, set up qemu, and starts the virtual machine. The size of the default hard disk is only 65G that sometimes not enough. Fortunately, you can simply resize it with the following command:</p><pre name="209b" id="209b" class="graf graf--pre graf-after--p">cd ~/snap/sosumi/common/<br>qemu-img resize macos.qcow2 +40G</pre><p name="af95" id="af95" class="graf graf--p graf-after--pre">Don’t worry, it is only the maximum size of the virtual drive, the actual size of the file is dynamic. If it’s done, you can start the installation. For the installation steps, watch this nice tutorial video:</p><figure name="6a42" id="6a42" class="graf graf--figure graf--iframe graf-after--p"><iframe src="https://www.youtube.com/embed/6WgjQpm9VWE?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe></figure><p name="ef25" id="ef25" class="graf graf--p graf-after--figure">You can find every important step in the video. When I tried it, I set the RAM to 8G and the CPU cores to 4. The only difference was that my EFI partition was on disk1s1, so I’ve mounted it by</p><pre name="619c" id="619c" class="graf graf--pre graf-after--p">sudo diskutil mount disk1s1</pre><p name="79fc" id="79fc" class="graf graf--p graf-after--pre">Unfortunately, the latest XCode (12.5) doesn’t work with Catalina, and Big Sur (the next version of MacOS) doesn’t run on sosumi, so you have to install an older XCode. You can easily download XCode 12.4 from the Apple Developer portal (<a href="https://developer.apple.com/download/more/?=xcode" data-href="https://developer.apple.com/download/more/?=xcode" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">https://developer.apple.com/download/more/?=xcode</a>) which works like a charm.</p><p name="0797" id="0797" class="graf graf--p graf-after--p graf--trailing">That’s all. Now you have a full-featured iOS development environment on Linux.</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@thebojda" class="p-author h-card">Laszlo Fazekas</a> on <a href="https://medium.com/p/bb3e012f5ddf"><time class="dt-published" datetime="2021-05-15T11:42:56.252Z">May 15, 2021</time></a>.</p><p><a href="https://medium.com/@thebojda/running-macos-in-a-linux-virtual-machine-with-sosumi-bb3e012f5ddf" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on May 21, 2021.</p></footer></article></body></html>

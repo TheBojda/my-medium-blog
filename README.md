@@ -309,5 +309,13 @@ avagy natív mobil appok fejlesztése Vue.js-el
 Neurális hálózatok tenyésztése genetikus algoritmussal PyGAD és OpenAI Gym használatával
 ](https://thebojda.github.io/my-medium-blog/posts/2021-01-24_Tensorflow-alapoz--10--24f7767d4a2c.html)
 
-[Our Universe Is A Massive Neural Network: Here’s Why | Hacker Noon ](https://thebojda.github.io/my-medium-blog/posts/draft_Our-Universe-Is-A-Massive-Neural-Network--Here-s-Why---Hacker-Noon-e55acf1f197b.html)
+[How Genetic Algorithms Can Compete with Gradient Descent and Backprop ](https://thebojda.github.io/my-medium-blog/posts/2021-03-04_How-Genetic-Algorithms-Can-Compete-with-Gradient-Descent-and-Backprop-30b59d5b1ac0.html)
+
+[Névszolgáltatások IPFS-hez 
+IPNS, DNSLink és blokklánc alapú címzés #ethereumtudas
+](https://thebojda.github.io/my-medium-blog/posts/2021-03-24_N-vszolg-ltat-sok-IPFS-hez-c1c5394daacd.html)
+
+[Running MacOS in a Linux virtual machine with sosumi 
+aka iOS development on Linux
+](https://thebojda.github.io/my-medium-blog/posts/2021-05-15_Running-MacOS-in-a-Linux-virtual-machine-with-sosumi-bb3e012f5ddf.html)
 
