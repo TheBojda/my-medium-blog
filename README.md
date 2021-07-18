@@ -319,3 +319,7 @@ IPNS, DNSLink és blokklánc alapú címzés #ethereumtudas
 aka iOS development on Linux
 ](https://thebojda.github.io/my-medium-blog/posts/2021-05-15_Running-MacOS-in-a-Linux-virtual-machine-with-sosumi-bb3e012f5ddf.html)
 
+[Code A Minimalistic NFT Smart Contract in Solidity On Ethereum: A How-To Guide | Hacker Noon ](https://thebojda.github.io/my-medium-blog/posts/2021-05-22_Code-A-Minimalistic-NFT-Smart-Contract-in-Solidity-On-Ethereum--A-How-To-Guide---Hacker-Noon-5cb72f0891c.html)
+
+[Docker alapozó ](https://thebojda.github.io/my-medium-blog/posts/2021-07-15_Docker-alapoz--b8efb6aa68e9.html)
+
