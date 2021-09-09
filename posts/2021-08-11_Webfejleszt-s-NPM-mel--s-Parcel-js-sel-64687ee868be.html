@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Webfejlesztés NPM-mel és Parcel.js-sel</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Webfejlesztés NPM-mel és Parcel.js-sel</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+Az NPM a Node.js csomagkezelője amit Node csomagok mellett weblapunk JavaScript függőségeinek kezelésére is használhatunk, így nem kell…
+</section>
+<section data-field="body" class="e-content">
+<section name="59f3" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="dfd3" id="dfd3" class="graf graf--h3 graf--leading graf--title">Webfejlesztés NPM-mel és Parcel.js-sel</h3><figure name="2971" id="2971" class="graf graf--figure graf-after--h3"><img class="graf-image" data-image-id="0*cIsBMLVF5OluTK0U.png" data-width="2000" data-height="571" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/0*cIsBMLVF5OluTK0U.png"><figcaption class="imageCaption">Forrás: <a href="https://github.com/parcel-bundler/parcel" data-href="https://github.com/parcel-bundler/parcel" class="markup--anchor markup--figure-anchor" rel="nofollow noopener" target="_blank">https://github.com/parcel-bundler/parcel</a></figcaption></figure><p name="24df" id="24df" class="graf graf--p graf-after--figure">Az <a href="https://www.npmjs.com/" data-href="https://www.npmjs.com/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">NPM</a> a <a href="https://nodejs.org/en/" data-href="https://nodejs.org/en/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Node.js</a> csomagkezelője amit Node csomagok mellett weblapunk JavaScript függőségeinek kezelésére is használhatunk, így nem kell többé script tag-eket karbantartani (és még egy rakás más előnnyel is jár, amikről később fogok írni). Ehhez viszont szükség van egy bundlerre, ami az NPM által behúzott csomagokat egyetlen optimalizált JS fájlba pakolja össze. A <a href="https://parceljs.org/" data-href="https://parceljs.org/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Parcel.js</a> egy ilyen bundler és egyben egy olyan eszköz ami sok szempontból nagyon meg tudja könnyíteni weboldalak fejlesztését.</p><p name="2951" id="2951" class="graf graf--p graf-after--p">A Parcel.js nagyon röviden úgy definiálja magát, hogy “Blazing fast, zero configuration web application bundler”, ami nagyjából magában is foglalja az eszköz legnagyobb előnyét, hogy nagyon könnyű használni, hiszen nem kell semmit konfigurálnunk. Nézzünk is gyorsan egy példát!</p><p name="f02b" id="f02b" class="graf graf--p graf-after--p">Hozzunk létre egy üres könyvtárat, majd a könyvtárban futtassuk le az</p><pre name="77cd" id="77cd" class="graf graf--pre graf-after--p">npm init -y </pre><p name="3d6d" id="3d6d" class="graf graf--p graf-after--pre">parancsot, ami létrehoz egy üres packages.json fájlt. Ha ezzel megvagyunk, telepítsük a parcel bundlert az</p><pre name="15fa" id="15fa" class="graf graf--pre graf-after--p">npm install parcel-bundler --save-dev</pre><p name="7a59" id="7a59" class="graf graf--p graf-after--pre">paranccsal, majd adjuk hozzá a packages.json scripts részéhez a következő két sort:</p><pre name="57b5" id="57b5" class="graf graf--pre graf-after--p">&quot;build&quot;: &quot;parcel build index.html&quot;,<br>&quot;start&quot;: &quot;parcel index.html&quot;</pre><p name="2cd0" id="2cd0" class="graf graf--p graf-after--pre">Utolsó lépésként hozzunk létre egy minimális weboldalt index.html néven:</p><pre name="d246" id="d246" class="graf graf--pre graf-after--p">&lt;!doctype html&gt;<br>&lt;html lang=&quot;en&quot;&gt;</pre><pre name="bf34" id="bf34" class="graf graf--pre graf-after--pre">&lt;head&gt;<br> &lt;meta charset=&quot;utf-8&quot;&gt;<br> &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;<br> &lt;title&gt;Parcel sample&lt;/title&gt;<br>&lt;/head&gt;</pre><pre name="712d" id="712d" class="graf graf--pre graf-after--pre">&lt;body&gt;<br> &lt;script src=&quot;index.js&quot;&gt;&lt;/script&gt;<br>&lt;/body&gt;</pre><pre name="4a8d" id="4a8d" class="graf graf--pre graf-after--pre">&lt;/html&gt;</pre><p name="6abb" id="6abb" class="graf graf--p graf-after--pre">és egy index.js állományt:</p><pre name="ed86" id="ed86" class="graf graf--pre graf-after--p">console.log(&quot;Hello parcel!&quot;);</pre><p name="fa5b" id="fa5b" class="graf graf--p graf-after--pre">A parcel bundlert az</p><pre name="2028" id="2028" class="graf graf--pre graf-after--p">npm start </pre><p name="263a" id="263a" class="graf graf--p graf-after--pre">paranccsal indíthatjuk. Ilyenkor a rendszer a belépési pontként megadott index.html-t elemezve elkezdi feltérképezni a környezetet, megtalálja az index.js-t amit becsomagol, majd elindít egy szervert a <a href="http://localhost:1234" data-href="http://localhost:1234" class="markup--anchor markup--p-anchor" target="_blank">http://localhost:1234</a> címen. Ha mindent jól csináltunk, a fenti URL-t megnyitva a böngészőben a konzolon láthatjuk a “Hello parcel!” szöveget.</p><p name="3d62" id="3d62" class="graf graf--p graf-after--p">Persze ez eddig nem túl nagy teljesítmény. Adjuk hozzá a következő 3 sort az index.js állomány elejéhez:</p><pre name="d14e" id="d14e" class="graf graf--pre graf-after--p">import ‘bootstrap’<br>import ‘bootstrap/dist/css/bootstrap.css’<br>import ‘<a href="http://twitter.com/fortawesome/fontawesome-free" data-href="http://twitter.com/fortawesome/fontawesome-free" class="markup--anchor markup--pre-anchor" title="Twitter profile for @fortawesome/fontawesome-free" rel="noopener" target="_blank">@fortawesome/fontawesome-free</a>/css/all.css’</pre><p name="50bf" id="50bf" class="graf graf--p graf-after--pre">A fájl mentését követően a parcel észreveszi a változásokat és elkezd dolgozni. Az import direktívák hatására leszedegeti a szükséges csomagokat, amiről meg is győződhetünk ha belenézünk a pacakges.json fájlba. A másik amit észrevehetünk, hogy ha a böngészőben megnézzük az index.html forrását, bekerült egy stylesheet hivatkozás a headerbe. A parcel észrevette, hogy két css-t importáltunk és ebből összegyúrt egyetlen css-t, ami magában foglalja a bootstrap.css-t, a fontawsome.css-t. Ezzel a 3 egyszerű sorral tehát behúztuk a bootstrap és a fontawsome legújabb változatát úgy, hogy nem kellett bajlódnunk sem a letöltéssel, sem a script és link tag-ek karbantartásával. Mind a html mind a js kódunk szép tiszta maradt. Itt már jól látszik a “zero configuration” előnye amit a bevezetőben említettem. Ha berakunk egy egyszerű navbar-t a body rész elejére, akkor láthatjuk is, hogy a rendszer tényleg behúzta a bootstrap-et:</p><pre name="8002" id="8002" class="graf graf--pre graf-after--p">&lt;nav class=&quot;navbar navbar-expand-lg navbar-dark bg-dark&quot;&gt;<br> &lt;div class=&quot;container-fluid&quot;&gt;<br>   &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;Navbar&lt;/a&gt;<br> &lt;/div&gt;<br>&lt;/nav&gt;</pre><p name="b90c" id="b90c" class="graf graf--p graf-after--pre">A parcel “zero configuration” rendszere tehát úgy működik, hogy a belépési pontként megadott index.html-ből kiindulva feltérképezi a projektet, majd futás közben figyeli azt. Ha bármi változik, a böngészőben rögtön látjuk a változást és amit lehet próbál automatikusan kezelni a rendszer. Ha új importok kerülnek a JS fájlba, akkor behúzza a szükséges csomagokat, valamint a kiterjesztés alapján elvégzi a szükséges teendőket. A css fájlokat például egyetlen nagy css fájlba csomagolja, de ezen kívül még ismer egy csomó kiterjesztést (pl.: jsx, ts, scss, stb. — a <a href="https://parceljs.org/getting_started.html" data-href="https://parceljs.org/getting_started.html" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">teljes lista itt található</a>), amiket automatikusan tud fordítani (pl. TypeScript-ből JS-t) és csomagolni. A következőkben erre mutatnék egy példát.</p><p name="5941" id="5941" class="graf graf--p graf-after--p">A sok ismert fájlformátum közt szerepel a Vue is, ami Vue.js modult jelöl (<a href="https://thebojda.medium.com/vue-js-alapoz%C3%B3-8be3a4db812d" data-href="https://thebojda.medium.com/vue-js-alapoz%C3%B3-8be3a4db812d" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">a Vue.js-ről itt írtam bővebben</a>). Lássuk hogy tudunk hozzáadni egy Vue.js komponenst a már meglévő egyszerű weboldalunkhoz. Ehhez hozzunk létre egy App.vue állományt a következő tartalommal:</p><figure name="9400" id="9400" class="graf graf--figure graf--iframe graf-after--p"><script src="https://gist.github.com/TheBojda/756aa1b43c96c3b4761c6aa36f924842.js"></script><figcaption class="imageCaption"><a href="https://gist.github.com/TheBojda/756aa1b43c96c3b4761c6aa36f924842" data-href="https://gist.github.com/TheBojda/756aa1b43c96c3b4761c6aa36f924842" class="markup--anchor markup--figure-anchor" rel="nofollow noopener" target="_blank">https://gist.github.com/TheBojda/756aa1b43c96c3b4761c6aa36f924842</a></figcaption></figure><p name="b8a1" id="b8a1" class="graf graf--p graf-after--figure">Adjunk hozzá egy üres div-et az index.html állományunkhoz:</p><pre name="1970" id="1970" class="graf graf--pre graf-after--p">&lt;div id=&quot;app&quot;&gt;&lt;/div&gt;</pre><p name="57be" id="57be" class="graf graf--p graf-after--pre">Valamint pár sort az index.js-hez, ami a fenti komponenst a div-re köti:</p><pre name="dfb8" id="dfb8" class="graf graf--pre graf-after--p">import Vue from &#39;vue&#39;;<br>import App from &#39;./App.vue&#39;;</pre><pre name="0ae1" id="0ae1" class="graf graf--pre graf-after--pre">new Vue({ render: createElement =&gt; createElement(App) }).$mount(&#39;#app&#39;);</pre><p name="e491" id="e491" class="graf graf--p graf-after--pre">Ha minden jól ment, akkor pár másodperc várakozás után megjelenik a TODO komponens a weboldalunkon. Mi csupán egyetlen fájlt és pár sort adtunk a meglévő projekthez, de a háttérben egy csomó minden történt. A parcel behúzta a szükséges javascript könyvtárakat (amit a packages.json-ben láthatunk is), lefordította a Vue fájlt amiben a script betét ráadásul TypeScript, így a TypeScript fordítót is meghívta, majd elkészítette a csomagolt js és css fájlokat és frissítette az oldalt.</p><p name="4e8b" id="4e8b" class="graf graf--p graf-after--p">Ha végeztünk a fejlesztéssel, az</p><pre name="372d" id="372d" class="graf graf--pre graf-after--p">npm run build</pre><p name="0ee9" id="0ee9" class="graf graf--p graf-after--pre">paranccsal legenerálhatjuk az oldalunkat a dist könyvtárba, amit aztán bármilyen webszerver alá kipakolhatunk.</p><p name="41d2" id="41d2" class="graf graf--p graf-after--p graf--trailing">Röviden ennyit szerettem volna írni az npm-mel és parcel.js-sel történő fejlesztésről. Remélem sikerült megmutatni, hogy mennyire megkönnyítheti a dolgunkat ez a két egyszerű eszköz és talán kis kedvet csinálni a használatukhoz. A parcel.js weboldalán részletes <a href="https://parceljs.org/getting_started.html" data-href="https://parceljs.org/getting_started.html" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">dokumentációt</a> találhat az, akit jobban érdekel ez a kis eszköz, ami amellett hogy önmagában is rengeteg mindent tud, könnyen bővíthető is saját pluginekkel és csomagolókkal.</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@thebojda" class="p-author h-card">Laszlo Fazekas</a> on <a href="https://medium.com/p/64687ee868be"><time class="dt-published" datetime="2021-08-11T09:45:18.018Z">August 11, 2021</time></a>.</p><p><a href="https://medium.com/@thebojda/webfejleszt%C3%A9s-npm-mel-%C3%A9s-parcel-js-sel-64687ee868be" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on September 9, 2021.</p></footer></article></body></html>

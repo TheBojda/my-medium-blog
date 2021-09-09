@@ -21,7 +21,7 @@ This is a backup of my Medium blog. [https://medium.com/@thebojda](https://mediu
 
 [Az utolsó ](https://thebojda.github.io/my-medium-blog/posts/2017-07-30_Az-utols--c639a79042a9.html)
 
-[Tanulj meg Ethereum okosszerződést programozni! #ethereumtudas ](https://thebojda.github.io/my-medium-blog/posts/2017-07-31_Tanulj-meg-Ethereum-okosszerz-d-st-programozni---ethereumtudas-b2acc1d837e2.html)
+[Solidity alapozó, avagy tanulj meg Ethereum okosszerződést programozni! #ethereumtudas ](https://thebojda.github.io/my-medium-blog/posts/2017-07-31_Solidity-alapoz---avagy-tanulj-meg-Ethereum-okosszerz-d-st-programozni---ethereumtudas-b2acc1d837e2.html)
 
 [A bányászat és az okos szerződések #ethereumtudas ](https://thebojda.github.io/my-medium-blog/posts/2017-08-07_A-b-ny-szat--s-az-okos-szerz-d-sek--ethereumtudas-a025e08a7954.html)
 
@@ -47,16 +47,6 @@ This is a backup of my Medium blog. [https://medium.com/@thebojda](https://mediu
 … avagy miért éri meg az ENVIENTA ICO-ba fektetni?
 ](https://thebojda.github.io/my-medium-blog/posts/2017-08-31_ENVIENTA---tban-egy--j-t-rsadalom-fel--43e6b72c3a2c.html)
 
-[Szervusz! Nagyon köszönjük a támogató szavakat, és mint ENVIENTA aktivista, meg is ragadnám az… 
-Itt írtunk róla bővebben…
-](https://thebojda.github.io/my-medium-blog/posts/2017-08-31_Szervusz--Nagyon-k-sz-nj-k-a-t-mogat--szavakat---s-mint-ENVIENTA-aktivista--meg-is-ragadn-m-az--7e625f50df84.html)
-
-[Az Ubuntu 16.04-es ](https://thebojda.github.io/my-medium-blog/posts/2017-09-02_Az-Ubuntu-16-04-es-2805829d5c.html)
-
-[Az npm-et is symlinkeld, ne csak a node-ot. ](https://thebojda.github.io/my-medium-blog/posts/2017-09-02_Az-npm-et-is-symlinkeld--ne-csak-a-node-ot--5b78d1199ddf.html)
-
-[Nekem most ide mutat: /usr/local/n/versions/node/6.11.1/bin/npm . Nézz körbe errefelé… ](https://thebojda.github.io/my-medium-blog/posts/2017-09-02_Nekem-most-ide-mutat---usr-local-n-versions-node-6-11-1-bin-npm---N-zz-k-rbe-errefel---2888ddcd84b7.html)
-
 [Nyomjunk saját pénzt, avagy az ERC20-as tokenek rejtelmei (2. rész) #ethereumtudas ](https://thebojda.github.io/my-medium-blog/posts/2017-09-04_Nyomjunk-saj-t-p-nzt--avagy-az-ERC20-as-tokenek-rejtelmei--2--r-sz---ethereumtudas-75852f914cbf.html)
 
 [ENVIENTA: on the way to a new society 
@@ -73,8 +63,6 @@ Itt írtunk róla bővebben…
 
 [DAOk, mesterséges intelligencia és virtuális államok, avagy a szerveződés új formái (2. rész) ](https://thebojda.github.io/my-medium-blog/posts/2017-09-08_DAOk--mesters-ges-intelligencia--s-virtu-lis--llamok--avagy-a-szervez-d-s--j-form-i--2--r-sz--cbb2c1525896.html)
 
-[Nem, ICO során nem tulajdonjogot árulsz. ](https://thebojda.github.io/my-medium-blog/posts/2017-09-08_Nem--ICO-sor-n-nem-tulajdonjogot--rulsz--d40487500929.html)
-
 [Áramszünet 
 …avagy milyen lehet a világ, ha helyet kap benne az ENVIENTA
 ](https://thebojda.github.io/my-medium-blog/posts/2017-09-15_-ramsz-net-ae5fa007b16d.html)
@@ -87,8 +75,6 @@ Itt írtunk róla bővebben…
 
 [ICO tokenek és coinok, avagy mi adja a kriptovaluták értékét?! ](https://thebojda.github.io/my-medium-blog/posts/2017-09-21_ICO-tokenek--s-coinok--avagy-mi-adja-a-kriptovalut-k--rt-k-t---dd9cde9d2a56.html)
 
-[Igen, csak el vagyok kicsit havazva. ](https://thebojda.github.io/my-medium-blog/posts/2017-09-28_Igen--csak-el-vagyok-kicsit-havazva--8c9ceaffc75f.html)
-
 [Programozzunk ICO-t (1. rész) #ethereumtudas 
 az ICO programozás alapjai
 ](https://thebojda.github.io/my-medium-blog/posts/2017-10-02_Programozzunk-ICO-t--1--r-sz---ethereumtudas-c251ecff18fc.html)
@@ -98,8 +84,6 @@ az ICO programozás alapjai
 [ENVIENTA, the produce-everything global company ](https://thebojda.github.io/my-medium-blog/posts/2017-10-17_ENVIENTA--the-produce-everything-global-company-3525b2a30b32.html)
 
 [ENVIENTA Lifestyle, avagy építőkockák egy új világhoz ](https://thebojda.github.io/my-medium-blog/posts/2017-10-17_ENVIENTA-Lifestyle--avagy--p-t-kock-k-egy--j-vil-ghoz-e376ef4f097c.html)
-
-[Wow. Nice thoughts! ](https://thebojda.github.io/my-medium-blog/posts/2017-10-20_Wow--Nice-thoughts--48325573bdd9.html)
 
 [Frissült az ICO white paperünk (ez már a 6-os verzió) 
 ENVIENTA white paper Version 6.0 (Frissítve: 2017–10–21, nyelv: angol)
@@ -118,8 +102,6 @@ Ismerd meg az alapfogalmakat, amelyek meghatározzák az ENVIENTA pénzügy műk
 [Hálózat effektus, likvid és okos tokenek 
 …avagy hogyan működik a Bancor protokoll
 ](https://thebojda.github.io/my-medium-blog/posts/2017-10-29_H-l-zat-effektus--likvid--s-okos-tokenek-1e265dbb4e7a.html)
-
-[Very good article! ](https://thebojda.github.io/my-medium-blog/posts/2017-11-12_Very-good-article--9ad27988fb2b.html)
 
 [ENVIENTA token ökoszisztéma ](https://thebojda.github.io/my-medium-blog/posts/2017-11-27_ENVIENTA-token--kosziszt-ma-a48d8afeffa6.html)
 
@@ -149,8 +131,6 @@ aka how to build simulated realities
 
 [Helyzetjelentés: World Summit, Fokváros vízhiány ](https://thebojda.github.io/my-medium-blog/posts/2018-02-13_Helyzetjelent-s--World-Summit--Fokv-ros-v-zhi-ny-b368a434db6a.html)
 
-[Hi! Sidechain is the most exciting feature of Lisk, but I haven’t found any docs about them (how… ](https://thebojda.github.io/my-medium-blog/posts/2018-02-26_Hi--Sidechain-is-the-most-exciting-feature-of-Lisk--but-I-haven-t-found-any-docs-about-them--how--596ba59c5dc4.html)
-
 [Lemondással jár-e a fenntarthatóság?! ](https://thebojda.github.io/my-medium-blog/posts/2018-03-01_Lemond-ssal-j-r-e-a-fenntarthat-s-g---d8d6639f7b8.html)
 
 [Az ENVIENTA kriptotoken alapú üzleti modellje 
@@ -167,9 +147,9 @@ Gabriel barátom hívta fel a figyelmemet az alábbi Twitter postra.
 
 [Hyperledger és Burrow, avagy hogyan készítsünk saját blokkláncot #ethereumtudas ](https://thebojda.github.io/my-medium-blog/posts/2018-07-30_Hyperledger--s-Burrow--avagy-hogyan-k-sz-ts-nk-saj-t-blokkl-ncot--ethereumtudas-d5caabf3529f.html)
 
-[ERC-1155: egyedi tokenek felturbózva #ethereumtudas 
+[ERC-1155: egyedi tokenek (NFT — Non-fungible token) felturbózva #ethereumtudas 
 …avagy daraboljunk kriptomacskát
-](https://thebojda.github.io/my-medium-blog/posts/2018-08-02_ERC-1155--egyedi-tokenek-felturb-zva--ethereumtudas-3a6798bc8318.html)
+](https://thebojda.github.io/my-medium-blog/posts/2018-08-02_ERC-1155--egyedi-tokenek--NFT---Non-fungible-token--felturb-zva--ethereumtudas-3a6798bc8318.html)
 
 [ERC-1155: non-fungible tokens on steroids 
 …or let’s cut CryptoKitties
@@ -190,10 +170,6 @@ avagy fájlrendszer a blokklánchoz
 [Exponenciális fejlődés, nyílt forrás, és az ENVIENTA Platform ](https://thebojda.github.io/my-medium-blog/posts/2018-10-24_Exponenci-lis-fejl-d-s--ny-lt-forr-s---s-az-ENVIENTA-Platform-e2c389625b9e.html)
 
 [One minute before the singularity ](https://thebojda.github.io/my-medium-blog/posts/2018-12-27_One-minute-before-the-singularity-4edded3e9377.html)
-
-[Great article with a very interesting token model! ](https://thebojda.github.io/my-medium-blog/posts/2019-01-07_Great-article-with-a-very-interesting-token-model--f104b26b9405.html)
-
-[Are these notaries identified, trusted parties, or they can be anonymous nodes? ](https://thebojda.github.io/my-medium-blog/posts/2019-01-20_Are-these-notaries-identified--trusted-parties--or-they-can-be-anonymous-nodes--8581daaf13af.html)
 
 [Ganache, Remix IDE és MetaMask, 
 avagy Ethereum fejlesztőkörnyezet 5 perc alatt
@@ -235,8 +211,6 @@ avagy hogy működik az OpenWater technológiája
 
 [How does OpenWater’s mind reader work?! ](https://thebojda.github.io/my-medium-blog/posts/2019-05-19_How-does-OpenWater-s-mind-reader-work---750bea176aeb.html)
 
-[Ahogy utánaolvastam még kicsit, láttam, hogy Jepsenéken kívül még sokan foglalkoznak ezzel a… ](https://thebojda.github.io/my-medium-blog/posts/2019-05-26_Ahogy-ut-naolvastam-m-g-kicsit--l-ttam--hogy-Jepsen-ken-k-v-l-m-g-sokan-foglalkoznak-ezzel-a--1a7baf214dcc.html)
-
 [Neuralink, OpenWater, DARPA N3, avagy milyen messze van a minden érzékre kiterjedő (MATRIX… ](https://thebojda.github.io/my-medium-blog/posts/2019-07-24_Neuralink--OpenWater--DARPA-N3--avagy-milyen-messze-van-a-minden--rz-kre-kiterjed---MATRIX--4472f823a47.html)
 
 [Neuralink, OpenWater, DARPA N3, aka how far is the full-immersive (MATRIX style) virtual reality?! ](https://thebojda.github.io/my-medium-blog/posts/2019-07-28_Neuralink--OpenWater--DARPA-N3--aka-how-far-is-the-full-immersive--MATRIX-style--virtual-reality---2f5576fa343c.html)
@@ -273,8 +247,6 @@ avagy hogy működik az OpenWater technológiája
 Visszacsatolt hálózatok és LSTM
 ](https://thebojda.github.io/my-medium-blog/posts/2020-01-12_Tensorflow-alapoz--5--df99bc48e306.html)
 
-[I was thinking about how to simulate physics in a “perfect” virtual world. ](https://thebojda.github.io/my-medium-blog/posts/2020-01-17_I-was-thinking-about-how-to-simulate-physics-in-a--perfect--virtual-world--f41b59ddcadc.html)
-
 [Tensorflow alapozó 6. 
 GAN-ok, avagy hogyan generáljunk cicákat neurális hálóval
 ](https://thebojda.github.io/my-medium-blog/posts/2020-01-26_Tensorflow-alapoz--6--1ba1a32a79d5.html)
@@ -303,8 +275,6 @@ avagy natív mobil appok fejlesztése Vue.js-el
 
 [Neuralinkről mindenkinek, avagy milyen messze még a MATRIX agy-gép interfésze ](https://thebojda.github.io/my-medium-blog/posts/2020-08-30_Neuralinkr-l-mindenkinek--avagy-milyen-messze-m-g-a-MATRIX-agy-g-p-interf-sze-8a8328405486.html)
 
-[Our Universe Is A Massive Neural Network: Here’s Why ](https://thebojda.github.io/my-medium-blog/posts/2020-11-01_Our-Universe-Is-A-Massive-Neural-Network--Here-s-Why-e55acf1f197b.html)
-
 [Tensorflow alapozó 10. 
 Neurális hálózatok tenyésztése genetikus algoritmussal PyGAD és OpenAI Gym használatával
 ](https://thebojda.github.io/my-medium-blog/posts/2021-01-24_Tensorflow-alapoz--10--24f7767d4a2c.html)
@@ -315,6 +285,8 @@ Neurális hálózatok tenyésztése genetikus algoritmussal PyGAD és OpenAI Gym
 IPNS, DNSLink és blokklánc alapú címzés #ethereumtudas
 ](https://thebojda.github.io/my-medium-blog/posts/2021-03-24_N-vszolg-ltat-sok-IPFS-hez-c1c5394daacd.html)
 
+[I think the main problem is that deep learning is not AI in general meaning. ](https://thebojda.github.io/my-medium-blog/posts/2021-04-18_I-think-the-main-problem-is-that-deep-learning-is-not-AI-in-general-meaning--62d62e2b2796.html)
+
 [Running MacOS in a Linux virtual machine with sosumi 
 aka iOS development on Linux
 ](https://thebojda.github.io/my-medium-blog/posts/2021-05-15_Running-MacOS-in-a-Linux-virtual-machine-with-sosumi-bb3e012f5ddf.html)
@@ -322,4 +294,14 @@ aka iOS development on Linux
 [Code A Minimalistic NFT Smart Contract in Solidity On Ethereum: A How-To Guide | Hacker Noon ](https://thebojda.github.io/my-medium-blog/posts/2021-05-22_Code-A-Minimalistic-NFT-Smart-Contract-in-Solidity-On-Ethereum--A-How-To-Guide---Hacker-Noon-5cb72f0891c.html)
 
 [Docker alapozó ](https://thebojda.github.io/my-medium-blog/posts/2021-07-15_Docker-alapoz--b8efb6aa68e9.html)
+
+[Webfejlesztés NPM-mel és Parcel.js-sel ](https://thebojda.github.io/my-medium-blog/posts/2021-08-11_Webfejleszt-s-NPM-mel--s-Parcel-js-sel-64687ee868be.html)
+
+[Writing decentralized applications in JavaScript — libp2p basics ](https://thebojda.github.io/my-medium-blog/posts/2021-09-05_Writing-decentralized-applications-in-JavaScript---libp2p-basics-4fa46c5dae8a.html)
+
+[How Photonic Processors Will Save Machine Learning 
+a quick introduction of LightOn’s OPU
+](https://thebojda.github.io/my-medium-blog/posts/2021-09-06_How-Photonic-Processors-Will-Save-Machine-Learning-9dac20224b6b.html)
+
+[Our Universe Is A Massive Neural Network: Here’s Why ](https://thebojda.github.io/my-medium-blog/posts/2021-09-08_Our-Universe-Is-A-Massive-Neural-Network--Here-s-Why-a0d5a5787230.html)
 

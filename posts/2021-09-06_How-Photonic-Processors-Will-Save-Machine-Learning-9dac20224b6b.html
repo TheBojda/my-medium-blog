@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>How Photonic Processors Will Save Machine Learning</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">How Photonic Processors Will Save Machine Learning</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+a quick introduction of LightOn’s OPU
+</section>
+<section data-field="body" class="e-content">
+<section name="bd14" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="afc9" id="afc9" class="graf graf--h3 graf--leading graf--title">How Photonic Processors Will Save Machine Learning</h3><h4 name="3db1" id="3db1" class="graf graf--h4 graf-after--h3 graf--subtitle">a quick introduction of LightOn’s OPU</h4><figure name="d6b7" id="d6b7" class="graf graf--figure graf-after--h4"><img class="graf-image" data-image-id="0*B9NSURLjfZyenDh2" data-width="2000" data-height="1021" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/0*B9NSURLjfZyenDh2"></figure><p name="1798" id="1798" class="graf graf--p graf-after--figure">Machine learning is expensive — it requires high computing capacity. For example, training of the OpenAI’s famous GPT-3 model <a href="https://lambdalabs.com/blog/demystifying-gpt-3/" data-href="https://lambdalabs.com/blog/demystifying-gpt-3/" class="markup--anchor markup--p-anchor" rel="noopener noreferrer nofollow noopener" target="_blank">would cost over $4.5M</a>, and requires an amount of energy equivalent to the <a href="https://www.anthropocenemagazine.org/2020/11/time-to-talk-about-carbon-footprint-artificial-intelligence/" data-href="https://www.anthropocenemagazine.org/2020/11/time-to-talk-about-carbon-footprint-artificial-intelligence/" class="markup--anchor markup--p-anchor" rel="noopener noreferrer nofollow noopener" target="_blank">yearly consumption of 126 Danish homes</a> and creates a carbon footprint equivalent to traveling 700,000 kilometers by car for a single training session.</p><p name="dd64" id="dd64" class="graf graf--p graf-after--p">Photonic processors are one of the most promising solutions to the huge computing capacity need and the extreme carbon footprint because they are fast (as we know, light is the fastest thing in the universe) and really energy efficient.</p><p name="0079" id="0079" class="graf graf--p graf-after--p">Some companies on the market have production-ready photonic processors. One of my favorites is <a href="https://medium.com/u/1a8df9096570" data-href="https://medium.com/u/1a8df9096570" data-anchor-type="2" data-user-id="1a8df9096570" data-action-value="1a8df9096570" data-action="show-user-card" data-action-type="hover" class="markup--user markup--p-user" target="_blank">LightOn</a> because their solution is relatively simple, and the way it works is something like magic (you will see why).</p><p name="171f" id="171f" class="graf graf--p graf-after--p"><a href="https://lighton.ai/photonic-computing-for-ai/" data-href="https://lighton.ai/photonic-computing-for-ai/" class="markup--anchor markup--p-anchor" rel="noopener noreferrer nofollow noopener" target="_blank">LightOn’s OPU (Optical Processing Unit)</a> can do only one thing, but it can do this one thing fast and efficiently. It can multiply a vector with a giant random matrix. The hardware converts the input to a light pattern. A special waveguide does the random matrix multiplication in an analog way. In the end, a camera converts back the result to a vector. The random matrix is fixed, so the multiplication hardware (the waveguide) here is a passive element. But how can help a random matrix multiplicator to machine learning?</p><figure name="8a65" id="8a65" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="0*AY1AAabQ16__FPc4.png" data-width="359" data-height="140" src="https://cdn-images-1.medium.com/max/800/0*AY1AAabQ16__FPc4.png"><figcaption class="imageCaption">source: <a href="https://indico.cern.ch/event/852553/contributions/4057150/attachments/2127912/3582939/tr201022_David_Rousseau_OPU_IML.pdf" data-href="https://indico.cern.ch/event/852553/contributions/4057150/attachments/2127912/3582939/tr201022_David_Rousseau_OPU_IML.pdf" class="markup--anchor markup--figure-anchor" rel="noopener" target="_blank">https://indico.cern.ch/event/852553/contributions/4057150/attachments/2127912/3582939/tr201022_David_Rousseau_OPU_IML.pdf</a></figcaption></figure><p name="c7ad" id="c7ad" class="graf graf--p graf-after--figure">Multiplication with a fixed giant random matrix sounds meaningless, but don’t listen to your intuition, it is a very meaningful thing. It is a convenient way for dimension reduction called random projection. The random projection has a good property; it nearly preserves the distances because of the <a href="https://en.wikipedia.org/wiki/Johnson%E2%80%93Lindenstrauss_lemma" data-href="https://en.wikipedia.org/wiki/Johnson%E2%80%93Lindenstrauss_lemma" class="markup--anchor markup--p-anchor" rel="noopener noreferrer nofollow noopener" target="_blank">Johnson–Lindenstrauss lemma</a>. So if you have two vectors in a high dimensional space, the distance of the projected vectors will be nearly the same as their original distance.</p><p name="e3d6" id="e3d6" class="graf graf--p graf-after--p">This distance preserving property <a href="https://medium.com/@LightOnIO/tackling-reinforcement-learning-with-the-aurora-opu-88f3ffff137a" data-href="https://medium.com/@LightOnIO/tackling-reinforcement-learning-with-the-aurora-opu-88f3ffff137a" class="markup--anchor markup--p-anchor" target="_blank">can be used very well in reinforcement learning</a>. In LightOn’s example, they are using their OPU to convert the actual game state to a 32 dimension vector. Here the game state is a screen snapshot that is represented by a 33600 (210x160 pixels) vector — the OPU projects from this 33600 dimension space to a 32 dimension space. The learning method is simple Q-learning. The algorithm calculates the Q value and stores it for the (projected) state. If the Q value is unknown, it uses the Q value of the 9 nearest neighbors and calculates the average of them. Because of the Johnson–Lindenstrauss lemma, the distance of the projected vectors is more or less the same as the original state vectors, so the K nearest neighbors of the projected vector are projected from near original vectors. In this case, OPU is used to reduce the dimensions to create an easier problem (a 32 dimension vector is better than a 33600 dimension) which needs less storage, less computing capacity, or a smaller neural network. The same method can be used in recommender systems or any other cases where dimension reduction can be used, and the OPU does it fast on really high dimensional vectors. You can find the code <a href="https://github.com/lightonai/reinforcement-learning-opu" data-href="https://github.com/lightonai/reinforcement-learning-opu" class="markup--anchor markup--p-anchor" rel="noopener noreferrer nofollow noopener" target="_blank">here</a>.</p><p name="779a" id="779a" class="graf graf--p graf-after--p">As you can see, the method works fine:</p><figure name="fd00" id="fd00" class="graf graf--figure graf--iframe graf-after--p"><iframe src="https://www.youtube.com/embed/2K7p4PTYxXw?feature=oembed" width="640" height="480" frameborder="0" scrolling="no"></iframe></figure><p name="85e3" id="85e3" class="graf graf--p graf-after--figure">Another use case, when <a href="https://medium.com/@LightOnIO/au-revoir-backprop-bonjour-optical-transfer-learning-5f5ae18e4719" data-href="https://medium.com/@LightOnIO/au-revoir-backprop-bonjour-optical-transfer-learning-5f5ae18e4719" class="markup--anchor markup--p-anchor" target="_blank">OPU is used to project from a low dimensional space to a high dimensional space</a>. In LightOn’s transfer learning example, OPU is used instead of the linear layers of a neural network. In this case, a pretrained CNN (VGG, ResNet, etc.) is used for feature extraction, but the classification is not done by a neural network. Instead of the dense layers, OPU is projecting the feature vector to a high dimensional space where the samples are linearly separable. So, thanks to OPU a simple linear classifier can be used instead of a neural network.</p><figure name="cf8e" id="cf8e" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="0*BCf44mzxIYJjMxJK.png" data-width="924" data-height="241" src="https://cdn-images-1.medium.com/max/800/0*BCf44mzxIYJjMxJK.png"><figcaption class="imageCaption">source: <a href="https://medium.com/@LightOnIO/au-revoir-backprop-bonjour-optical-transfer-learning-5f5ae18e4719" data-href="https://medium.com/@LightOnIO/au-revoir-backprop-bonjour-optical-transfer-learning-5f5ae18e4719" class="markup--anchor markup--figure-anchor" rel="nofollow" target="_blank">https://medium.com/@LightOnIO/au-revoir-backprop-bonjour-optical-transfer-learning-5f5ae18e4719</a></figcaption></figure><p name="4c65" id="4c65" class="graf graf--p graf-after--figure">The above 2 examples used the OPU to map the original problem to an easier problem that needs less computing capacity and storage, but can it be used to make the neural network training process easier? The answer is yes. There is a method called <a href="https://arxiv.org/pdf/2006.12878.pdf" data-href="https://arxiv.org/pdf/2006.12878.pdf" class="markup--anchor markup--p-anchor" rel="noopener noreferrer nofollow noopener" target="_blank">Direct Feedback Alignment</a> in this case the <a href="https://arxiv.org/abs/1609.01596" data-href="https://arxiv.org/abs/1609.01596" class="markup--anchor markup--p-anchor" rel="noopener noreferrer nofollow noopener" target="_blank">error is propagated through fixed random feedback connections directly from the output layer to each hidden layer</a>. This method has 2 advantages. We can train the hidden layers parallelly and the error is propagated through a fixed random matrix what can be done efficiently with the OPU. Using random matrices instead of backpropagation sounds like magic, but it works.</p><p name="8e8e" id="8e8e" class="graf graf--p graf-after--p">Here is a nice YouTube video about DFA:</p><figure name="3479" id="3479" class="graf graf--figure graf--iframe graf-after--p"><iframe src="https://www.youtube.com/embed/Hdo81GtLC_4?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe></figure><p name="5e8c" id="5e8c" class="graf graf--p graf-after--figure graf--trailing">As you saw, a relatively simple photonic hardware can help multiple ways to reduce the huge computing capacity needs of machine learning, and OPU is only one of the photonic hardware on the market. There are other solutions with programable matrices or quantum photonic solutions. It is worth keeping your eyes on this field because machine learning needs more and more computing capacity, and photonic processors are one of the most promising ways to provide this.</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@thebojda" class="p-author h-card">Laszlo Fazekas</a> on <a href="https://medium.com/p/9dac20224b6b"><time class="dt-published" datetime="2021-09-06T20:44:23.026Z">September 6, 2021</time></a>.</p><p><a href="https://medium.com/@thebojda/how-photonic-processors-will-save-machine-learning-9dac20224b6b" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on September 9, 2021.</p></footer></article></body></html>
