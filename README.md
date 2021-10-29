@@ -225,13 +225,9 @@ avagy hogy működik az OpenWater technológiája
 
 [Will artificial intelligence exceeds human intelligence, aka can we reach the technological… ](https://thebojda.github.io/my-medium-blog/posts/2019-10-31_Will-artificial-intelligence-exceeds-human-intelligence--aka-can-we-reach-the-technological--49f86f0dca33.html)
 
-[Thank you for the great article! ](https://thebojda.github.io/my-medium-blog/posts/2019-11-06_Thank-you-for-the-great-article--818bb85eb8c6.html)
-
 [Tensorflow alapozó 2. 
 (backpropagation, avagy hogyan működik a varázslat)
 ](https://thebojda.github.io/my-medium-blog/posts/2019-11-10_Tensorflow-alapoz--2--14720a33aca.html)
-
-[Köszi. Lehet majd még upgrade-elem. ](https://thebojda.github.io/my-medium-blog/posts/2019-11-11_K-szi--Lehet-majd-m-g-upgrade-elem--80f8c9ad304c.html)
 
 [Tensorflow alapozó 3. 
 (autoencoderek, word2vec és embedding avagy dimenzió redukció neurális hálókkal)
@@ -304,4 +300,10 @@ a quick introduction of LightOn’s OPU
 ](https://thebojda.github.io/my-medium-blog/posts/2021-09-06_How-Photonic-Processors-Will-Save-Machine-Learning-9dac20224b6b.html)
 
 [Our Universe Is A Massive Neural Network: Here’s Why ](https://thebojda.github.io/my-medium-blog/posts/2021-09-08_Our-Universe-Is-A-Massive-Neural-Network--Here-s-Why-a0d5a5787230.html)
+
+[Hogyan építhetünk választási rendszert blokklánc alapon (közérthető módon) ](https://thebojda.github.io/my-medium-blog/posts/2021-09-26_Hogyan--p-thet-nk-v-laszt-si-rendszert-blokkl-nc-alapon--k-z-rthet--m-don--b5c0f8495d07.html)
+
+[Karma as a universal cryptocurrency 
+a concept of an ERC-1155 NFT for the moneyless world
+](https://thebojda.github.io/my-medium-blog/posts/2021-10-13_Karma-as-a-universal-cryptocurrency-ced01d29df42.html)
 

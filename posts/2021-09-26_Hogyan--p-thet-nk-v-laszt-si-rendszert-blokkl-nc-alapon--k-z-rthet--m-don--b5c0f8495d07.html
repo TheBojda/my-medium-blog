@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Hogyan építhetünk választási rendszert blokklánc alapon (közérthető módon)</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Hogyan építhetünk választási rendszert blokklánc alapon (közérthető módon)</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+Az egyik leggyakrabban felmerülő példa/kérdés a blokklánccal kapcsolatban, hogy vajon alkalmas eszköz-e egy online szavazás…
+</section>
+<section data-field="body" class="e-content">
+<section name="1991" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="7ef1" id="7ef1" class="graf graf--h3 graf--leading graf--title">Hogyan építhetünk választási rendszert blokklánc alapon (közérthető módon)</h3><p name="ced4" id="ced4" class="graf graf--p graf-after--h3">Az egyik leggyakrabban felmerülő példa/kérdés a blokklánccal kapcsolatban, hogy vajon alkalmas eszköz-e egy online szavazás lebonyolítására. Ebben a cikkben nagyon röviden, mindenki számára könnyen érthető módon szeretném elmagyarázni a blokklánc működését és hogy ezt miképpen lehetne egy online szavazó rendszer kialakítására felhasználni.</p><p name="db6c" id="db6c" class="graf graf--p graf-after--p">A blokklánc valójában egy olyan adatbázis, amibe ha valamit beírunk, azt utána soha többé nem változtathatjuk meg. Ami a blokkláncra került, az “kőbe van vésve”. Ezt a rendszer úgy oldja meg, hogy az adatokból blokkokat képez és minden blokk tartalmazza az előtte lévő blokk ellenőrző összegét. Minél több blokk keletkezik az adott blokk után, az annál “védettebb”, hiszen ha megváltoztatjuk a blokkot, akkor megváltozik az ellenőrző összeg. Ekkor már nem fog passzolni az utána következő blokkhoz, így annak az ellenőrző összegét is meg kell változtatni, és így tovább, egészen az utolsó blokkig. Ha tehát a mi blokkunkat 100 további blokk követi, akkor a mi blokkunk meghamisításához 100 további blokkot is meg kellene hamisítani. Ez persze nem jelentene sok védelmet, ha a blokklánc csak egyetlen központi gépen lenne tárolva, hiszen ha azt az egy gépet sikeresen meg lehet támadni úgy, hogy meghamisíthassanak rajta egyetlen blokkot, akkor valószínűleg a többi százat sem lenne túl nehéz. Csakhogy a blokkláncot minden egyes résztvevő tárolja a saját gépén, így bármilyen módosítási kísérlet rögtön kibukik.</p><p name="3bed" id="3bed" class="graf graf--p graf-after--p">Láthatjuk tehát, hogy a blokklánc egy olyan megváltoztathatatlan adatbázis, amit (jellemzően) mindenki olvashat, de fontos kérdés, hogy ki az aki írhat rá, a blokkláncra kerüléshez ugyanis általában meg kell felelni bizonyos szabályoknak. A BitCoin esetén például nagyon fontos, hogy a blokkláncra csak valós tranzakció kerülhessen fel. Tehát ne tudjak átutalni valakinek nem létező bitcoint, vagy ne utalhassam el ugyanazt a bitcoint két különböző személynek (ne tudjam kétszer elkölteni). Egy online szavazási rendszernél nyilván az lesz a szabály, hogy egy ember csak egyszer szavazhat. Ezeknek a szabályoknak a betartását a konszenzus mechanizmus biztosítja. A BitCoin egy trustless, egyenrangú hálózat, ami azt jelenti, hogy nincs egyetlen kiemelt résztvevő sem, mindenki egyenrangú. De hogy lehet egy ilyen rendszerben eldönteni, hogy kinek van igaza? A BitCoin megoldása erre a PoW (proof-of-work), ami röviden azt jelenti, hogy az a “vélemény” az erősebb, ami mögött több a számítási kapacitás. Úgy működik a dolog, hogy minden blokk felírásához meg kell oldani egy nehéz matematikai problémát amihez tekintélyes számítási kapacitás szükséges. Ha valaki meghamisít egy blokkot (például kétszer akarja elkölteni ugyanazt a bitcoint), akkor ott elágazik a blokklánc (ezt fork-nak hívják), de mivel azt az ágat fogadjuk el igaznak, ami hosszabb, ezért a hamis ág hamar elsorvad, mivel mindenki más a valid ágat fogja továbbépíteni. Egyetlen esély a hamisításra, ha a támadónak több számítási kapacitása van, mint a hálózat többi tagjának együttvéve. Ezt hívják 51%-os támadásnak. Tekintve azonban, hogy jelenleg is atomerőműnyi energiát fogyaszt a lánc építése, így hosszú távon a lánc hamisításához saját erőműre lenne szükségünk plusz a világ legnagyobb szuperszámítógépére. Nyilván ekkora számítási kapacitás nagyon sokba kerül, így a blokkok generálását a hálózat bitcoinnal honorálja. Ezért is hívják a blokkok generálást bányászatnak, hiszen olyan mint aranyat bányászni: befektetünk egy csomó energiát (az arany esetén pl. ásunk) hogy valami értéket kapjunk cserébe.</p><p name="e96b" id="e96b" class="graf graf--p graf-after--p">Szerencsére vannak más konszenzus mechanizmusok is amikhez nem feltétlen kell saját atomerőművet fenntartani. Ahogyan írtam, a BitCoin egy egyenrangú, trustless hálózat. Ez utóbbi azt jelenti, hogy nem kell megbíznunk senkiben. Ha hajlandóak vagyunk ebből kicsit engedni és megbízni a hálózat bizonyos kiemelt tagjaiban, akkor minimális energiával is üzemeltethetjük a blokkláncunkat.</p><p name="2d05" id="2d05" class="graf graf--p graf-after--p">A PoA konszenzus esetén például kinevezzük a hálózat pár megbízható tagját validátornak. Akkor kerülhet be egy blokk a láncba, ha a validátorok egyetértenek ebben. Hogy a láncba kerüléshez teljes egyetértés kell, vagy elég részleges (pl. &gt;50%) az döntés kérdése. Egy ilyen PoA konszenzusra már könnyen felépíthető egy egyszerű szavazórendszer.</p><p name="b9f5" id="b9f5" class="graf graf--p graf-after--p">Mielőtt rátérnénk a digitális szavazó rendszerre, nézzük, hogyan működik a hagyományos, papír alapú szavazás. Bemegyünk a szavazó helységbe, ahol azonosítjuk magunkat. Ha sikeres volt az azonosítás, akkor kapunk egy hitelesített szavazólapot. A szavazólapon bejelöljük a választásunkat, majd zárt borítékban bedobjuk az urnába. A nap végével az urnát kibontják és a szavazóbiztosok összeszámolják a szavazatokat. Ideális esetben a bizottságba minden résztvevő delegál egy tagot, így biztosítva, hogy a számláláskor ne lehessen csalni. Ez az utolsó kitétel egyébként pontosan ugyanaz mint a PoA konszenzus esetén. Vagyis csak akkor vesszük figyelembe a szavazatot, ha minden számlálóbiztos egyetért ebben.</p><p name="ca6c" id="ca6c" class="graf graf--p graf-after--p">Ha mindezt blokkláncra akarnánk leképezni PoA konszenzussal, az valahogy úgy nézne ki, hogy minden párt (és akár pár külső megfigyelő) delegál egy szervert a hálózatba. Ők lesznek a PoA validátorok. Az ő közös véleményükben megbízik a teljes hálózat, ugyanúgy, ahogyan megbízunk a szavazóbiztosok csoportjában. Minden blokkláncra történő íráshoz az ő teljes egyetértésük kell. Ennek megfelelően meghamisítani is csak közösen tudnák a láncot, de ha a lánc publikus, akkor a többi külső megfigyelő (bárki lehet külső megfigyelő, mivel a láncot bárki olvashatja) rögtön észrevenné, hogy probléma van. Maguk a PoA szerverek (a rendszer lelke) a publikus hálózatról leválasztva, teljesen védetten futnának a pártok saját szervertermeiben. Adatokat csak dedikált szerverekről fogadnának illetve kifelé publikálnák a blokkokat. Ezeket a szervereket tehát nem igazán lehetne támadni. Maga a publikus frontend ami a blokkokat állítja elő, amit aztán továbbküld a validátoroknak a cloudban futhatna, itt ugyanis biztosítható olyan infrastruktúra ami bármilyen nagy forgalomra skálázható és ami védhető a külső támadásoktól.</p><p name="f1e0" id="f1e0" class="graf graf--p graf-after--p">Nézzük, hogyan nézne ki a szavazás folyamata. Első lépésben az azonosítást követően kell kapnunk egy random kulcsot, amivel szavazhatunk. Ez egy nagyon érzékeny pont, hiszen a szavazás anonimitásának biztosítása érdekében fontos, hogy a személyes adatainkat ne lehessen a kulcshoz kötni, valamint hogy mindenki csak egyetlen kulcsot kaphasson. Ezt a papír alapú szavazásnál úgy biztosítják, hogy aki elmegy szavazni, azt lehúzzák a szavazásra jogosultak listájáról mikor megkapja a lepecsételt lapot, a folyamatot pedig a szavazóbiztosok ellenőrzik (figyelnek, hogy tényleg le legyen húzva a szavazó a listáról és hogy csak egy lapot kapjon). Ennek a digitális változata valahogy úgy nézne ki, hogy a személyes azonosítást követően a személyes adatokból képeznek egy ellenőrző összeget, amit a blokkláncra írnak. Ez megfelel annak, hogy a szavazót kihúzzák a papírról, hiszen akinek az ellenőrző összege a láncon van, az nem kaphat újra kulcsot. Ezt követően a rendszer legenerálja a kulcsot, amit minden PoA szerver hitelesít. A hitelesítés történhet azáltal, hogy a random kulcsot is a blokklánca írjuk, de nagyon fontos, hogy ezt ne lehessen semmiképpen a személyes ellenőrző összeghez kötni. Habár az ellenőrző összegből nem fejthetőek vissza a személyes adatok, egy nagy adatbázis segítségével az adatokhoz újra legenerálható az ellenőrző összeg, így ha ehhez valamilyen módon kötni lehetne a random kulcsot, úgy elveszne az anonimitás. Magát az ellenőrző összeget és a random kulcsot egyedül a PoA szerverek látják egyszerre akkor, amikor hitelesítik a kulcsot (kicseréljük a személyes adatainkat egy random kulcsra), így bennük meg kell bíznunk, hogy nem fogják ezt tárolni. (Illetve erre jogi garanciát kell biztosítaniuk a pártoknak, akik a PoA szervereket üzemeltetik.)</p><p name="ad99" id="ad99" class="graf graf--p graf-after--p">Ahogy láthatjuk, a folyamat legérzékenyebb pontja a random szavazókulcsok kiosztása, itt ugyanis meg kell bíznunk a rendszerben, hogy nem tárolja le azt, hogy egy adott személy milyen kulcsot kapott (ezzel biztosítva az anonimitást). A probléma megoldására létezik egy “matematikai trükk”, amit ZKP-nek (<a href="https://en.wikipedia.org/wiki/Zero-knowledge_proof" data-href="https://en.wikipedia.org/wiki/Zero-knowledge_proof" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Zero Knowledge Proof</a>) hívnak és a kripto világban leginkább “pénzmosásra” használják. A pénzmosás úgy történik, hogy a felhasználó egységnyi mennyiségű kriptovalutát egy un. coin mixerbe helyez. A coin mixerbe helyezéskor meg kell adni egy egyedi kulcsot. Eztán létrehoz egy másik pénztárcát és egy másik kulccsal kiveszi a pénzt. Ezt a másik kulcsot a berakáskor használt kulcsból generálják. Itt jön a képbe a ZKP. Meg lehet ugyanis oldani, hogy a rendszer követni tudja, hogy egy ilyen generált kulccsal csak egyszer lehessen kivenni egységnyi kriptovalutát (mindenki csak annyit vehessen ki amennyit berakott), úgy hogy közben a berakáshoz használt kulcs semmilyen módon nem hozható kapcsolatba a kivételhez használt kulccsal. Ezzel a megoldással tehát “tisztára mosható” a pénz, hiszen ha van sok száz pénzbefizetés és kivétel a coin mixeren keresztül, úgy képtelenség követni, hogy melyik befizetéshez melyik kivét tartozik. Hasonló módon lehet “tisztára mosni” a szavazó tokeneket is. Az azonosítást követően a felhasználó generál egy egyedi kulcsot, amit a rendszer letárol a személyes adataiból képzett ellenőrző összeg mellé (ez kvázi megfelel annak mint ha 1 darab szavazó tokent letétbe helyeznének nekünk a rendszerben). Amikor a felhasználó szavaz, akkor a ZKP segítségével generált új kulcsot használja, ami a fentiek alapján semmilyen módon nem hozható kapcsolatba az ellenőrző összeg mellett letárolt kulccsal, mégis biztosítható, hogy minden szavazó csak egyszer szavazhasson (csak egy darab szavazó tokent vehet ki, hasonlóan mint a coin mixer esetén). Ezzel a módszerrel (ami mögött elég bonyolult matematika rejtőzik) tehát elvileg biztosítható a teljes anonimitás.</p><p name="ce41" id="ce41" class="graf graf--p graf-after--p">Ha megtörtént a random kulcs kiosztása, onnan már viszonylag egyszerű a folyamat. A random kulcs használatával szavazunk, amit a rendszer felír a blokkláncra (ez felel meg annak, hogy bedobjuk a lapot az urnába) úgy, hogy közben ellenőrzi, hogy nem szavaztak-e már a kulccsal (mindenki egy lapot kap, egyszer szavazhat). Magára a szavazatszámlálásra már nem kell külön mechanizmus, hiszen a szavazás állása a blokkláncon real-time követhető.</p><p name="f0a5" id="f0a5" class="graf graf--p graf-after--p graf--trailing">Körülbelül így lehetne egyszerűen összerakni egy blokklánc alapú, PoA konszenzust használó, általános szavazórendszert.</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@thebojda" class="p-author h-card">Laszlo Fazekas</a> on <a href="https://medium.com/p/b5c0f8495d07"><time class="dt-published" datetime="2021-09-26T08:28:56.321Z">September 26, 2021</time></a>.</p><p><a href="https://medium.com/@thebojda/hogyan-%C3%A9p%C3%ADthet%C3%BCnk-v%C3%A1laszt%C3%A1si-rendszert-blokkl%C3%A1nc-alapon-k%C3%B6z%C3%A9rthet%C5%91-m%C3%B3don-b5c0f8495d07" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on October 29, 2021.</p></footer></article></body></html>
