@@ -307,3 +307,5 @@ a quick introduction of LightOn’s OPU
 a concept of an ERC-1155 NFT for the moneyless world
 ](https://thebojda.github.io/my-medium-blog/posts/2021-10-13_Karma-as-a-universal-cryptocurrency-ced01d29df42.html)
 
+[Decentralized Uber: Here’s How I Built It With Status.im, Waku, and Vue.js ](https://thebojda.github.io/my-medium-blog/posts/2021-12-03_Decentralized-Uber--Here-s-How-I-Built-It-With-Status-im--Waku--and-Vue-js-719b0b998387.html)
+
