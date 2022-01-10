@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Create a Crypto Crowdfunding Widget From a Few Lines of Code</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Create a Crypto Crowdfunding Widget From a Few Lines of Code</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+Would you like to start your very own crowdfunding campaign? Or collect some money for fixing a Github issue? Or would you accept some…
+</section>
+<section data-field="body" class="e-content">
+<section name="7e57" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="9ac2" id="9ac2" class="graf graf--h3 graf--leading graf--title">Create a Crypto Crowdfunding Widget From a Few Lines of Code</h3><figure name="3927" id="3927" class="graf graf--figure graf-after--h3"><img class="graf-image" data-image-id="0*-vkMUGAmkqZUikl0" data-width="1880" data-height="1159" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/0*-vkMUGAmkqZUikl0"><figcaption class="imageCaption">Source: <a href="https://www.pexels.com/" data-href="https://www.pexels.com/" class="markup--anchor markup--figure-anchor" rel="nofollow noopener" target="_blank">https://www.pexels.com/</a></figcaption></figure><p name="a632" id="a632" class="graf graf--p graf-after--figure">Would you like to start your very own crowdfunding campaign? Or collect some money for fixing a Github issue? Or would you accept some donations for your article? It’s super easy with crypto. In this article, we will build a crypto crowdfunding widget for accepting ERC-20 tokens or crypto on any Ethereum compatible network.</p><h4 name="121d" id="121d" class="graf graf--h4 graf-after--p">The Theory</h4><p name="36d3" id="36d3" class="graf graf--p graf-after--h4">Our widget will be a dynamically generated PNG that is generated from our Ethereum address and balance. You can embed this image anywhere where you can embed images by URL. You can add it to your GitHub readme or into the description of an issue, or you can embed it into your article, etc. The image will contain a QR code to your Ethereum address and an indicator that shows your balance, and how far is it from the target. When you start a new campaign, you have to create a new Ethereum account or a smart contract (ex.: an ICO contract) to accept the funds.</p><p name="79b6" id="79b6" class="graf graf--p graf-after--p">The user can simply scan the QR code and send some crypto. It takes about 10 seconds. Sending crypto to a crowdfunding campaign has never been easier.</p><h4 name="2190" id="2190" class="graf graf--h4 graf-after--p">The Code</h4><p name="4e22" id="4e22" class="graf graf--p graf-after--h4">We’ll use JavaScript for the implementation and node-canvas for generating the resulting PNG image.</p><p name="e74e" id="e74e" class="graf graf--p graf-after--p">First of all, we’ll create a gray canvas.</p><pre name="cdfb" id="cdfb" class="graf graf--pre graf-after--p">const canvas = createCanvas(200, 270) <br>const ctx = canvas.getContext(‘2d’) <br>ctx.fillStyle = “#aaaaaa” <br>ctx.fillRect(0, 0, canvas.width, canvas.height)</pre><p name="bac7" id="bac7" class="graf graf--p graf-after--pre">Then paint the QR code onto it. We’ll use the <a href="https://www.npmjs.com/package/qrcode" data-href="https://www.npmjs.com/package/qrcode" class="markup--anchor markup--p-anchor" rel="noopener noreferrer nofollow noopener" target="_blank">qrcode</a> library for this.</p><pre name="f10b" id="f10b" class="graf graf--pre graf-after--p">let qrcode = new Image()<br>qrcode.src = await QRCode.toDataURL(config.ETH_ADDRESS)<br>ctx.drawImage(qrcode, 10, 10, 180, 180)</pre><p name="992c" id="992c" class="graf graf--p graf-after--pre">The next step is querying the balance. We can easily do it by using the <a href="https://www.npmjs.com/package/web3" data-href="https://www.npmjs.com/package/web3" class="markup--anchor markup--p-anchor" rel="noopener noreferrer nofollow noopener" target="_blank">web3</a> library.</p><pre name="82d5" id="82d5" class="graf graf--pre graf-after--p">const web3 = new Web3(config.PROVIDER_URL)<br>const balance = parseInt(<br>  await web3.eth.getBalance(config.ETH_ADDRESS))</pre><p name="781d" id="781d" class="graf graf--p graf-after--pre">The constructor of the Web3 class has a provider parameter. This is the URL of the <a href="https://ethereum.org/en/developers/docs/apis/json-rpc/" data-href="https://ethereum.org/en/developers/docs/apis/json-rpc/" class="markup--anchor markup--p-anchor" rel="noopener noreferrer nofollow noopener" target="_blank">Ethereum JSON-RPC</a> endpoint. If you would use the Ethereum Mainnet, or one of the test networks then the best way is to use ConsenSys’s <a href="https://infura.io/" data-href="https://infura.io/" class="markup--anchor markup--p-anchor" rel="noopener noreferrer nofollow noopener" target="_blank">Infura</a>. MetaMask also uses this. If you want to accept payments on an alternative Ethereum compatible network like Polygon, or xDAI, etc. then you can <a href="https://github.com/ethereum-lists/chains/tree/master/_data/chains" data-href="https://github.com/ethereum-lists/chains/tree/master/_data/chains" class="markup--anchor markup--p-anchor" rel="noopener noreferrer nofollow noopener" target="_blank">find RPC endpoints here</a>.</p><p name="1157" id="1157" class="graf graf--p graf-after--p">It is also possible to query your ERC20 balance if you want to accept token payments.</p><pre name="3444" id="3444" class="graf graf--pre graf-after--p">const contract = new web3.eth.Contract(erc20_abi as AbiItem[],<br>  CONTRACT_ADDRESS)<br>const balance = <br>  await contract.methods.balanceOf(config.ETH_ADDRESS).call()</pre><p name="6b72" id="6b72" class="graf graf--p graf-after--pre">The constructor of the Contract class has 2 parameters the interface definition (ABI) and the address of the ERC20 token contract.</p><p name="c887" id="c887" class="graf graf--p graf-after--p">If the balance is known, calculating the percent is very easy.</p><pre name="008b" id="008b" class="graf graf--pre graf-after--p">let percent = balance / (config.TARGET_VALUE * 10 ** 18);<br>if (percent &gt; 1)<br>  percent = 1;</pre><p name="8841" id="8841" class="graf graf--p graf-after--pre">It’s important that the balance is in wei so you have to divide it by 10¹⁸.</p><p name="e1fa" id="e1fa" class="graf graf--p graf-after--p">The full code looks like this:</p><figure name="d99a" id="d99a" class="graf graf--figure graf--iframe graf-after--p"><script src="https://gist.github.com/TheBojda/a001fedc87f9978e4ef79b684f5e1194.js"></script></figure><p name="dd04" id="dd04" class="graf graf--p graf-after--figure">23 lines of code. As I wrote, it’s not a big deal. The full code is available on <a href="https://github.com/TheBojda/Ethereum-crowdfunding-widget-javascript" data-href="https://github.com/TheBojda/Ethereum-crowdfunding-widget-javascript" class="markup--anchor markup--p-anchor" rel="noopener noreferrer nofollow noopener" target="_blank">GitHub</a>. (And I also have a <a href="https://github.com/TheBojda/Ethereum-crowdfunding-widget" data-href="https://github.com/TheBojda/Ethereum-crowdfunding-widget" class="markup--anchor markup--p-anchor" rel="noopener noreferrer nofollow noopener" target="_blank">PHP implementation</a>.)</p><p name="7dae" id="7dae" class="graf graf--p graf-after--p">The code can run on a minimal Lightsail instance (3,5$/mo), but if you don’t want to allocate a full EC2 instance to it, you can deploy it to AWS lambda. Everything is included in the GitHub repo.</p><p name="697d" id="697d" class="graf graf--p graf-after--p">It’s a sample widget that collects xDAI (and by the way, if you like the article, or simply want to try how it works, you can send me some xDAI):</p><p name="a87b" id="a87b" class="graf graf--p graf-after--p"><a href="https://qiaby8b8pf.execute-api.eu-central-1.amazonaws.com" data-href="https://qiaby8b8pf.execute-api.eu-central-1.amazonaws.com" class="markup--anchor markup--p-anchor" rel="nofollow noopener" target="_blank">https://qiaby8b8pf.execute-api.eu-central-1.amazonaws.com</a></p><p name="4549" id="4549" class="graf graf--p graf-after--p">This article was originally published on <a href="https://hackernoon.com/create-a-crypto-crowdfunding-widget-from-a-few-lines-of-code" data-href="https://hackernoon.com/create-a-crypto-crowdfunding-widget-from-a-few-lines-of-code" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">HackerNoon</a>.</p><p name="b9ec" id="b9ec" class="graf graf--p graf-after--p graf--trailing"><em class="markup--em markup--p-em">More content at </em><a href="http://plainenglish.io/" data-href="http://plainenglish.io/" class="markup--anchor markup--p-anchor" rel="noopener noreferrer noopener" target="_blank"><em class="markup--em markup--p-em">plainenglish.io</em></a><em class="markup--em markup--p-em">. Sign up for our </em><a href="http://newsletter.plainenglish.io/" data-href="http://newsletter.plainenglish.io/" class="markup--anchor markup--p-anchor" rel="noopener noreferrer noopener" target="_blank"><em class="markup--em markup--p-em">free weekly newsletter</em></a><em class="markup--em markup--p-em">. Get exclusive access to writing opportunities and advice in our </em><a href="https://discord.gg/GtDtUAvyhW" data-href="https://discord.gg/GtDtUAvyhW" class="markup--anchor markup--p-anchor" rel="noopener noreferrer noopener" target="_blank"><em class="markup--em markup--p-em">community Discord</em></a><em class="markup--em markup--p-em">.</em></p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@thebojda" class="p-author h-card">Laszlo Fazekas</a> on <a href="https://medium.com/p/103a756a66cf"><time class="dt-published" datetime="2021-12-23T13:13:53.103Z">December 23, 2021</time></a>.</p><p><a href="https://medium.com/@thebojda/create-a-crypto-crowdfunding-widget-from-a-few-lines-of-code-103a756a66cf" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on January 10, 2022.</p></footer></article></body></html>

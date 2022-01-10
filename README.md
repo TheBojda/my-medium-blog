@@ -309,3 +309,5 @@ a concept of an ERC-1155 NFT for the moneyless world
 
 [Decentralized Uber: Here’s How I Built It With Status.im, Waku, and Vue.js ](https://thebojda.github.io/my-medium-blog/posts/2021-12-03_Decentralized-Uber--Here-s-How-I-Built-It-With-Status-im--Waku--and-Vue-js-719b0b998387.html)
 
+[Create a Crypto Crowdfunding Widget From a Few Lines of Code ](https://thebojda.github.io/my-medium-blog/posts/2021-12-23_Create-a-Crypto-Crowdfunding-Widget-From-a-Few-Lines-of-Code-103a756a66cf.html)
+
