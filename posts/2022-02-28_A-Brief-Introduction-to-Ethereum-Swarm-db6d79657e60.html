@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>A Brief Introduction to Ethereum Swarm</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">A Brief Introduction to Ethereum Swarm</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+With the Ethereum blockchain as the CPU of the world computer, Swarm is best thought of as its “hard disk”. — Viktor Trón, Team Lead at…
+</section>
+<section data-field="body" class="e-content">
+<section name="2d05" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="9424" id="9424" class="graf graf--h3 graf--leading graf--title">A Brief Introduction to Ethereum Swarm</h3><figure name="3fa6" id="3fa6" class="graf graf--figure graf-after--h3"><img class="graf-image" data-image-id="0*wIv9qBG2A2EPdVVz" data-width="955" data-height="387" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/0*wIv9qBG2A2EPdVVz"></figure><blockquote name="78d3" id="78d3" class="graf graf--blockquote graf-after--figure">With the Ethereum blockchain as the CPU of the world computer, Swarm is best thought of as its “hard disk”. — Viktor Trón, Team Lead at SWARM</blockquote><p name="c2e7" id="c2e7" class="graf graf--p graf-after--blockquote">The idea for Swarm came from Gavin Wood, one of the founders of Ethereum. When Viktor Trón and Daniel Nagy joined the Ethereum Foundation in 2015, they took over the project within the Foundation’s Geth team. It was more than 5 years ago. Now, in 2022 Swarm is more or less feature complete, and started its own long journey as an autonomous project. Swarm has its own foundation and finished its initial token offering with more than a $15 million investment.</p><p name="5be6" id="5be6" class="graf graf--p graf-after--p">In this article, I will show you why <a href="https://www.ethswarm.org/" data-href="https://www.ethswarm.org/" class="markup--anchor markup--p-anchor" rel="noopener noreferrer noopener" target="_blank">Swarm</a> is an exciting project, and what unique features (like feeds and direct messaging) make it different from other storage solutions.</p><p name="ae91" id="ae91" class="graf graf--p graf-after--p">Ethereum Swarm is basically a giant <a href="https://en.wikipedia.org/wiki/Distributed_hash_table" data-href="https://en.wikipedia.org/wiki/Distributed_hash_table" class="markup--anchor markup--p-anchor" rel="noopener noreferrer noopener" target="_blank">DHT</a>. DHTs are used in many storage solutions (like BitTorrent or IPFS) as a database where peers can find where the data is stored. Swarm uses the DHT in a different way because it stores the data itself in the DHT. Swarm calls this solution DISC which means Distributed Immutable Store for Chunks. When you store anything in Swarm, it splits it into 4K chunks. These chunks are addressable by the chunk hash and stored on nodes that are the nearest to the chunk address. Every chunk is stored redundantly on the 4 nearest nodes.</p><p name="8ce6" id="8ce6" class="graf graf--p graf-after--p">The network structure of Swarm is stable and highly optimized for the DHT. Because of this optimized network structure, the content retrieval in Swarm is really efficient. Swarm calls this Kademlia connectivity. If you need a more detailed explanation of the network structure, you can read about it in the <a href="https://docs.ethswarm.org/the-book-of-swarm.pdf" data-href="https://docs.ethswarm.org/the-book-of-swarm.pdf" class="markup--anchor markup--p-anchor" rel="noopener noreferrer noopener" target="_blank">Book of Swarm</a>.</p><p name="47d3" id="47d3" class="graf graf--p graf-after--p">Swarm is based on <a href="https://hackernoon.com/writing-decentralized-applications-in-javascript-libp2p-basics" data-href="https://hackernoon.com/writing-decentralized-applications-in-javascript-libp2p-basics" class="markup--anchor markup--p-anchor" rel="noopener noreferrer noopener" target="_blank">libp2p</a> (underlay network), but nodes are addressed by an address that is derived from its Ethereum address (overlay network). The signature method is also the same that is used by Ethereum, and signatures can be easily validated by smart contracts. This makes Swarm an ideal storage solution for Ethereum.</p><p name="4c6d" id="4c6d" class="graf graf--p graf-after--p">Anonymity is one of the key points of Swarm. Every node knows only a limited number of its neighbors because of Kademlia connectivity. If a chunk is not found on any neighbor they ask their neighbors, etc., and forward back the content. It’s not possible to find out who is the requestor, and who is the source of the given chunk. Swarm calls this method forwarding Kademlia.</p><p name="2c70" id="2c70" class="graf graf--p graf-after--p">Bandwidth is a scarce resource in Swarm, because of this when you retrieve a chunk, you have to pay a small amount of BZZ (the native token of SWarm) for the retrieval. It is something like gas cost on the Ethereum network. If your neighbor has the chunk, it can keep the BZZ. If not, it has to pay one of its neighbors for it. This solution incentivizes the nodes to cache frequently asked contents and keep them near to the customers. It makes Swarm a really efficient CDN. (Swarm would be an ideal solution for decentralized multimedia streaming.)</p><p name="caae" id="caae" class="graf graf--p graf-after--p">Swarm has a very interesting solution for accounting. It is something like <a href="https://en.wikipedia.org/wiki/Lightning_Network" data-href="https://en.wikipedia.org/wiki/Lightning_Network" class="markup--anchor markup--p-anchor" rel="noopener noreferrer noopener" target="_blank">Lightning Network</a>, where microtransactions happen off-chain. In the case of Swarm, nodes keep track of a bandwidth balance. If a node gives and retrieves the same amount of chunks to another node, the balance will be near 0. If this balance goes over a limit, the node has to pay with a cheque.</p><p name="46bb" id="46bb" class="graf graf--p graf-after--p">Cheques are digitally signed data packs that can be collected by the nodes, and that can be used to withdraw BZZ tokens from the checkbook contract when it’s worth it. This is Swarm’s own gasless micropayment solution, but theoretically, it would be used for any cases where micropayment is needed.</p><p name="b4ec" id="b4ec" class="graf graf--p graf-after--p">There are two ways for storing data on Swarm. The first is global pinning. In this case, you store your data on your drive, and the DHT contains only a reference to it. It is very similar to the method used by <a href="https://hackernoon.com/a-beginners-guide-to-ipfs-20673fedd3f" data-href="https://hackernoon.com/a-beginners-guide-to-ipfs-20673fedd3f" class="markup--anchor markup--p-anchor" rel="noopener noreferrer noopener" target="_blank">IPFS</a> to store data. It is free of charge because you store your own data, but not anonymous and you have to deal with the redundancy, etc. Another way of storage is using a postage stamp. A postage stamp is something like a cheque that can be used by the storage nodes to withdraw BZZ if they can prove that they storing your content. In this case, the content is stored in the correct place in the DHT, the source of the data is untrackable and the redundant storage is provided by the Swarm network.</p><p name="b14f" id="b14f" class="graf graf--p graf-after--p">Content addressed chunks only one type of Swarm chunks. There is another type of chunk that is called Single Owner Chunk (SOC). In this case, the chunk key is a hash of the owner’s Ethereum address and a chunk identifier. A SOC is valid only if it’s signed by the owner. This type of chunk makes it possible to create a tricky data structure on Swarm that is called a feed.</p><p name="9b15" id="9b15" class="graf graf--p graf-after--p">A feed is represented by a SOC where the identifier is hashed from a topic and a sequence number. A feed is a “virtually mutable” data structure on immutable storage. When the owner wants to change the content of her feed, she increases the sequence number and publishes a new SOC. The Swarm client can heuristically find the highest sequence number, and pull the latest content. These mutable contents can be used in many ways. For example, you can assign it to your ENS address, and you can update the content without any blockchain interaction.</p><p name="26b3" id="26b3" class="graf graf--p graf-after--p">Another type of chunk is the trojan chunk. As I wrote at the beginning chunks are stored on the DHT on the nodes that are near to the chunk key by the node address (Ethereum address). This function of Swarm can be used to send direct messages to nodes. In this case, the message is packed into a chunk (this is the trojan chunk) and sent to the network. The network tries to store the chunk in the correct place, and nodes will forward it to the target node. The message is encoded, so only the target node will be able to read it. If the target node is offline, the neighbors will store it as a normal chunk if it has a postage stamp. Swarm has a high-level API to manage these trojan chunks, they called it PSS. PSS is something like an anonymous mail service that is a full-featured replacement of Ethereum’s dead messaging service Whisper.</p><p name="d39b" id="d39b" class="graf graf--p graf-after--p">As you can see, Swarm is a really exciting storage solution, and much more. The unique features like Feeds, PSS messaging, and the micropayment system make it a complex ecosystem that can be used in many ways.</p><p name="9295" id="9295" class="graf graf--p graf-after--p">At the end of the article, I would say a big “Thank You!” for Viktor (Trón) who patiently answered my questions and helped me to understand the basics of Swarm.</p><p name="5ee5" id="5ee5" class="graf graf--p graf-after--p graf--trailing"><em class="markup--em markup--p-em">This article was originally posted on </em><a href="https://hackernoon.com/a-brief-introduction-to-ethereum-swarm" data-href="https://hackernoon.com/a-brief-introduction-to-ethereum-swarm" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank"><em class="markup--em markup--p-em">HackerNoon</em></a><em class="markup--em markup--p-em">.</em></p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@thebojda" class="p-author h-card">Laszlo Fazekas</a> on <a href="https://medium.com/p/db6d79657e60"><time class="dt-published" datetime="2022-02-28T10:04:04.048Z">February 28, 2022</time></a>.</p><p><a href="https://medium.com/@thebojda/a-brief-introduction-to-ethereum-swarm-db6d79657e60" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on March 31, 2022.</p></footer></article></body></html>

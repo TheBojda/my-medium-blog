@@ -311,3 +311,19 @@ a concept of an ERC-1155 NFT for the moneyless world
 
 [Create a Crypto Crowdfunding Widget From a Few Lines of Code ](https://thebojda.github.io/my-medium-blog/posts/2021-12-23_Create-a-Crypto-Crowdfunding-Widget-From-a-Few-Lines-of-Code-103a756a66cf.html)
 
+[How to Create an NFT Contract (without Coding Skills) 
+Mint your own NFTs on any Ethereum compatible chain such as the Mainnet, Polygon, xDai, etc
+](https://thebojda.github.io/my-medium-blog/posts/2022-01-25_How-to-Create-an-NFT-Contract--without-Coding-Skills--968d3fc37f5e.html)
+
+[A First Look at MyETHMeta: The Gravatar for Your Ethereum Account 
+Introducing a decentralized metadata service for Ethereum
+](https://thebojda.github.io/my-medium-blog/posts/2022-02-04_A-First-Look-at-MyETHMeta--The-Gravatar-for-Your-Ethereum-Account-c9c09679483b.html)
+
+[Web3 is not About Blockchain or Decentralization ](https://thebojda.github.io/my-medium-blog/posts/2022-02-15_Web3-is-not-About-Blockchain-or-Decentralization-f78fda0d3f9b.html)
+
+[A Brief Introduction to Ethereum Swarm ](https://thebojda.github.io/my-medium-blog/posts/2022-02-28_A-Brief-Introduction-to-Ethereum-Swarm-db6d79657e60.html)
+
+[Understanding Zero-Knowledge Proofs Through the Source Code of Tornado Cash 
+Dive into the world of smart contracts with Zero-knowledge proof
+](https://thebojda.github.io/my-medium-blog/posts/2022-03-07_Understanding-Zero-Knowledge-Proofs-Through-the-Source-Code-of-Tornado-Cash-41d335c5475f.html)
+

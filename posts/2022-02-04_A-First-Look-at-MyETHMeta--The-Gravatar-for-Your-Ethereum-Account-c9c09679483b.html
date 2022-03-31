@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>A First Look at MyETHMeta: The Gravatar for Your Ethereum Account</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">A First Look at MyETHMeta: The Gravatar for Your Ethereum Account</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+Introducing a decentralized metadata service for Ethereum
+</section>
+<section data-field="body" class="e-content">
+<section name="9403" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="fff4" id="fff4" class="graf graf--h3 graf--leading graf--title">A First Look at MyETHMeta: The Gravatar for Your Ethereum Account</h3><h4 name="88a7" id="88a7" class="graf graf--h4 graf-after--h3 graf--subtitle">Introducing a decentralized metadata service for Ethereum</h4><figure name="143c" id="143c" class="graf graf--figure graf-after--h4"><img class="graf-image" data-image-id="0*is_hl2elrFJrUwSu" data-width="1355" data-height="978" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/0*is_hl2elrFJrUwSu"><figcaption class="imageCaption"><a href="https://myethmeta.org/" data-href="https://myethmeta.org/" class="markup--anchor markup--figure-anchor" rel="noopener" target="_blank">https://myethmeta.org</a></figcaption></figure><p name="08da" id="08da" class="graf graf--p graf-after--figure"><a href="https://gravatar.com/" data-href="https://gravatar.com/" class="markup--anchor markup--p-anchor" rel="noopener noreferrer nofollow noopener" target="_blank">Gravatar</a> is the most widely used profile picture service. It is used by GitHub, WordPress, Disqus, and many other services. But Gravatar is not only a profile pic service. It can manage full user profiles based on portable contacts.</p><p name="6040" id="6040" class="graf graf--p graf-after--p"><a href="https://myethmeta.org/" data-href="https://myethmeta.org/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">MyETHMeta</a> is a completely decentralized metadata service for Ethereum. Your profile picture and profile data are assigned to your Ethereum address instead of your e-mail address.</p><p name="2c4b" id="2c4b" class="graf graf--p graf-after--p">The metadata assignment is managed by a smart contract on the Polygon chain. <a href="https://polygon.technology/" data-href="https://polygon.technology/" class="markup--anchor markup--p-anchor" rel="noopener noreferrer nofollow noopener" target="_blank">Polygon</a> is chosen because of the low gas fees (updating metadata URL on the chain is less than 2 cents). The metadata can be stored on any URL.</p><p name="4e01" id="4e01" class="graf graf--p graf-after--p">The storage can be a centralized server or any decentralized storage like <a href="https://ipfs.io/" data-href="https://ipfs.io/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">IPFS</a> or <a href="https://www.ethswarm.org/" data-href="https://www.ethswarm.org/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Swarm</a>. The metadata itself is a simple JSON file. It is based on <a href="https://en.wikipedia.org/wiki/Portable_Contacts" data-href="https://en.wikipedia.org/wiki/Portable_Contacts" class="markup--anchor markup--p-anchor" rel="noopener noreferrer nofollow noopener" target="_blank">PortableContacts</a> (like Gravatar), but you can freely extend it by custom fields. (You can find <a href="https://github.com/TheBojda/myethmeta/blob/main/specification/myethmeta-schema.json" data-href="https://github.com/TheBojda/myethmeta/blob/main/specification/myethmeta-schema.json" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">here</a> the JSON schema of the metadata.)</p><p name="60d1" id="60d1" class="graf graf--p graf-after--p">The MyETHMeta smart contract is really simple. Anybody can simply set a URL for his Ethereum account. The authentication is done by the smart contract, so only the owner of the account can change the URL. The code looks like this:</p><pre name="7b0f" id="7b0f" class="graf graf--pre graf-after--p"><code class="markup--code markup--pre-code">contract MyEthMeta {<br>    mapping(address =&gt; string) private metaURIs;</code></pre><pre name="5bf3" id="5bf3" class="graf graf--pre graf-after--pre"><code class="markup--code markup--pre-code">    event MetaURIChanged(address indexed ethAddress, string uri);</code></pre><pre name="a78c" id="a78c" class="graf graf--pre graf-after--pre"><code class="markup--code markup--pre-code">    function setMetaURI(string memory uri) public {<br>        metaURIs[msg.sender] = uri;<br>        emit MetaURIChanged(msg.sender, uri);<br>    }</code></pre><pre name="f023" id="f023" class="graf graf--pre graf-after--pre"><code class="markup--code markup--pre-code">    function getMetaURI(address ethAddress)<br>        public<br>        view<br>        returns (string memory)<br>    {<br>        return metaURIs[ethAddress];<br>    }<br>}</code></pre><p name="b184" id="b184" class="graf graf--p graf-after--pre">The smart contract is not owned by anybody, so anybody can freely publish his own metadata through the contract.</p><p name="7a7f" id="7a7f" class="graf graf--p graf-after--p">MyETHMeta has a really simple, <strong class="markup--strong markup--p-strong">zero-dependency</strong> <a href="https://www.npmjs.com/package/myethmeta" data-href="https://www.npmjs.com/package/myethmeta" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">JavaScript library</a> for reading metadata. The size of the library is less than 2K and gives a simple interface to read the profile information for the given Ethereum address:</p><pre name="36a5" id="36a5" class="graf graf--pre graf-after--p"><code class="markup--code markup--pre-code">const client = new MyEthMetaClient()<br>const metadata = await client.getMetaData(eth_address)</code></pre><pre name="0929" id="0929" class="graf graf--pre graf-after--pre"><code class="markup--code markup--pre-code">image.src = metadata.thumbnailUrl // show profile picture</code></pre><p name="5a0d" id="5a0d" class="graf graf--p graf-after--pre">Although profile metadata can be managed manually, MyETHMeta has a profile page service, where anybody can easily manage his own profile.</p><figure name="8704" id="8704" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*mD2TxScrXo4fdbPStDETgQ.png" data-width="1855" data-height="1051" src="https://cdn-images-1.medium.com/max/800/1*mD2TxScrXo4fdbPStDETgQ.png"></figure><p name="5632" id="5632" class="graf graf--p graf-after--figure">The profile page is a DApp. No data is stored on the server side because MyETHMeta has no backend service. It is a static HTML page that communicates only with the Polygon chain (through the official Polygon proxy) and uses <a href="https://www.pinata.cloud/" data-href="https://www.pinata.cloud/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Pinata</a> to store the user data. So, the metadata and the profile picture are totally owned by the profile owner.</p><p name="9e54" id="9e54" class="graf graf--p graf-after--p">At the end of this article, let’s see some of the plans:</p><ul class="postList"><li name="4d2a" id="4d2a" class="graf graf--li graf-after--p"><strong class="markup--strong markup--li-strong">UI/UX improvements</strong> (obviously needed)</li><li name="317b" id="317b" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Validated data.</strong> Digital signatures could be added to the JSON in EIP-191 format. Trusted validators could sign some data in the JSON (ex.: the Twitter account) to validate it.</li><li name="576c" id="576c" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">More data.</strong> Adding some more personal data and using the previous validation method could help to develop more trusted services. For example, in a decentralized Uber, if you see the validated driving license number of your driver, you can trust him better.</li><li name="9d47" id="9d47" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">NFT profile pictures.</strong> NFT pictures are so popular, and MyETHMeta could easily support them. Ownership can be easily validated because the data is assigned to the Ethereum account.</li><li name="8e02" id="8e02" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">VCF support.</strong> The profile data could be exported in VCF format that is supported by address books on many mobile platforms. You could simply add the contact information to your address book with one click.</li><li name="c4ab" id="c4ab" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Ethereum Swarm feed support.</strong> <a href="https://docs.ethswarm.org/docs/dapps-on-swarm/feeds/" data-href="https://docs.ethswarm.org/docs/dapps-on-swarm/feeds/" class="markup--anchor markup--li-anchor" rel="noopener" target="_blank">Feeds</a> are a unique feature of Ethereum Swarm. By using feeds, you can assign mutable data to a topic assigned to your Ethereum account. This feature makes it possible to store and update the metadata assignments without any blockchain interaction.</li></ul><p name="18f7" id="18f7" class="graf graf--p graf-after--li">If you have an Ethereum address, let’s create a <a href="https://myethmeta.org/" data-href="https://myethmeta.org/" class="markup--anchor markup--p-anchor" rel="noopener noreferrer nofollow noopener" target="_blank">MyETHMeta</a> profile. You have nothing to lose. The <a href="https://polygonscan.com/address/0x63Ba8dfAEBa09a63c1bCB47a46229f14707Af995#code" data-href="https://polygonscan.com/address/0x63Ba8dfAEBa09a63c1bCB47a46229f14707Af995#code" class="markup--anchor markup--p-anchor" rel="noopener noreferrer nofollow noopener" target="_blank">smart contract</a> is public and cheap to use (less than 2 cents in MATIC). Your metadata will be stored in your pinata account. MyETHMeta doesn’t have any backend servers.</p><p name="c437" id="c437" class="graf graf--p graf-after--p">The pages are static HTML that is hosted on AWS S3/CloudFront. Everything is open-source, so you can check it if you don’t believe me. You can find the GitHub repo <a href="https://github.com/TheBojda/myethmeta" data-href="https://github.com/TheBojda/myethmeta" class="markup--anchor markup--p-anchor" rel="noopener noreferrer nofollow noopener" target="_blank">here</a>.</p><p name="c0f9" id="c0f9" class="graf graf--p graf-after--p graf--trailing">Keep in mind that MyETHMeta is in the beta stage, so any error report, feature request, and PR are really appreciated.</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@thebojda" class="p-author h-card">Laszlo Fazekas</a> on <a href="https://medium.com/p/c9c09679483b"><time class="dt-published" datetime="2022-02-04T16:58:48.044Z">February 4, 2022</time></a>.</p><p><a href="https://medium.com/@thebojda/a-first-look-at-myethmeta-gravatar-for-your-ethereum-account-c9c09679483b" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on March 31, 2022.</p></footer></article></body></html>
