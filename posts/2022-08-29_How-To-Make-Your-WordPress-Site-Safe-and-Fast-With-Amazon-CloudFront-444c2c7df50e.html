@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>How To Make Your WordPress Site Safe and Fast With Amazon CloudFront</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">How To Make Your WordPress Site Safe and Fast With Amazon CloudFront</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+A brief guide to this highly recommended program
+</section>
+<section data-field="body" class="e-content">
+<section name="5a49" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="6add" id="6add" class="graf graf--h3 graf--leading graf--title">How To Make Your WordPress Site Safe and Fast With Amazon CloudFront</h3><h4 name="008f" id="008f" class="graf graf--h4 graf-after--h3 graf--subtitle">A brief guide to this highly recommended program</h4><figure name="94f6" id="94f6" class="graf graf--figure graf-after--h4"><img class="graf-image" data-image-id="1*YmSeavMXXrI1eXSep-an1A.jpeg" data-width="1920" data-height="1271" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*YmSeavMXXrI1eXSep-an1A.jpeg"><figcaption class="imageCaption">Source: <a href="https://pixabay.com/hu/photos/wordpress-k%c3%a9z-embl%c3%a9ma-h%c3%a1tt%c3%a9rk%c3%a9p-589121/" data-href="https://pixabay.com/hu/photos/wordpress-k%c3%a9z-embl%c3%a9ma-h%c3%a1tt%c3%a9rk%c3%a9p-589121/" class="markup--anchor markup--figure-anchor" rel="nofollow noopener" target="_blank">https://pixabay.com/hu/photos/wordpress-k%c3%a9z-embl%c3%a9ma-h%c3%a1tt%c3%a9rk%c3%a9p-589121/</a></figcaption></figure><p name="1125" id="1125" class="graf graf--p graf-after--figure"><a href="https://wordpress.org/" data-href="https://wordpress.org/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">WordPress</a> is one of the most popular CMSs. It’s easy to install and easy to use, and there are thousands of plugins and templates that make website development super easy and super fast. But its advantages are also disadvantages because page generation can be resource-demanding, and WordPress is not only one of the most popular but also one of the most vulnerable systems.</p><p name="7fe1" id="7fe1" class="graf graf--p graf-after--p">There are many cases where a simple static webpage would be enough, but WordPress is a more convenient solution. A blog or a product website is a good example. You have to choose a template, set the colors and some other things, upload the content, and voila, you have a full-featured website with some work hours. These are the cases when CloudFront can be an excellent solution to make your website fast, scalable, and secure.</p><p name="db62" id="db62" class="graf graf--p graf-after--p"><a href="https://aws.amazon.com/cloudfront/" data-href="https://aws.amazon.com/cloudfront/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Amazon CloudFront</a> is a <a href="https://en.wikipedia.org/wiki/Content_delivery_network" data-href="https://en.wikipedia.org/wiki/Content_delivery_network" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Content Delivery Network</a>. A worldwide distributed cache system. When a user tries to access your content through CloudFront, the system routes the request to the nearest edge server, which serves the content if it exists on it or asks it from your WordPress server.</p><p name="d803" id="d803" class="graf graf--p graf-after--p">In this case, WordPress is something like a static page generator that generates the pages that CloudFront serves. The resource consumption of your site will be extremely low because CloudFront asks for the content only once and serves it million times if needed. You can handle extremely high traffic with millions of users by using only a micro instance for your WordPress!</p><p name="1e55" id="1e55" class="graf graf--p graf-after--p">Another advantage of this system is that only the CloudFront part is public. Your WordPress is hidden from the outer world so that nobody can attack or hack it. Behind CloudFront, your origin is in maximum safety.</p><p name="ad2b" id="ad2b" class="graf graf--p graf-after--p">To add CloudFront to your WordPress site, set up a CloudFront distribution on the AWS console.</p><figure name="5d79" id="5d79" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*XTCklXgXhsL2KeL8Zay3Bw.png" data-width="800" data-height="733" src="https://cdn-images-1.medium.com/max/800/1*XTCklXgXhsL2KeL8Zay3Bw.png"></figure><p name="a19f" id="a19f" class="graf graf--p graf-after--figure">Set the origin domain to your current WordPress site’s URL, and give a name to your distribution.</p><figure name="5bba" id="5bba" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*QPiogLq0-ObmaD0kJXHPEg.png" data-width="800" data-height="608" src="https://cdn-images-1.medium.com/max/800/1*QPiogLq0-ObmaD0kJXHPEg.png"></figure><p name="3ecb" id="3ecb" class="graf graf--p graf-after--figure">On the “Settings” block choose an alternate domain. This will be the new domain where your WordPress site will be accessible through CloudFront.</p><p name="4065" id="4065" class="graf graf--p graf-after--p">If the deployment is done, copy the CloudFront domain name, and create a CNAME record to it. For example, if your alternate domain is www.example.com and the CloudFront domain is d3qu6ceheilwux.cloudfront.net, then add a</p><pre name="1e49" id="1e49" class="graf graf--pre graf-after--p"><code class="markup--code markup--pre-code">www.example.com CNAME d3qu6ceheilwux.cloudfront.net</code></pre><p name="e6c8" id="e6c8" class="graf graf--p graf-after--pre">record to your DNS zone file.</p><p name="21ff" id="21ff" class="graf graf--p graf-after--p">If everything has been done well, you will see your site on <a href="http://www.example.com/?ref=hackernoon.com" data-href="http://www.example.com/?ref=hackernoon.com" class="markup--anchor markup--p-anchor" rel="noopener noreferrer ugc noopener" target="_blank">www.example.com</a>. Clicking on the links on the new site will go back to the original WordPress site. To prevent this, add these two lines of code to the beginning of your wp-config.php:</p><pre name="69d5" id="69d5" class="graf graf--pre graf-after--p"><code class="markup--code markup--pre-code">if($_SERVER[&#39;HTTP_USER_AGENT&#39;] == &#39;Amazon CloudFront&#39;) {<br>    define( &#39;WP_HOME&#39;, &#39;... new site URL …&#39; );<br>    define( &#39;WP_SITEURL&#39;, &#39;... new site URL …&#39; );<br>} else {<br>    define( &#39;WP_HOME&#39;, &#39;... original site URL …&#39; );<br>    define( &#39;WP_SITEURL&#39;, &#39;... original site URL …&#39; );<br>}</code></pre><p name="799d" id="799d" class="graf graf--p graf-after--pre">The user agent of CloudFront is ‘Amazon CloudFront,’ so when CloudFront reads the site content, it will get the new URLs, but when we access it for administration, it will use the original URLs. After this modification, the links will point to the CloudFront URLs (ex.: www.example.com).</p><p name="1ddd" id="1ddd" class="graf graf--p graf-after--p">Congratulation! You have set up CloudFront for your WordPress site. We are almost done, but I promised improved safety, and our original site is still public. The easiest way to prevent attacks on the original site is to add HTTP authentication with a strong password.</p><p name="57f7" id="57f7" class="graf graf--p graf-after--p">If you are using Nginx, you can generate a password file by using the htpasswd utility:</p><pre name="77b9" id="77b9" class="graf graf--pre graf-after--p"><code class="markup--code markup--pre-code">htpasswd -c /etc/nginx/htpasswd wordpress</code></pre><p name="b37c" id="b37c" class="graf graf--p graf-after--pre">that you can add to your config:</p><pre name="f16d" id="f16d" class="graf graf--pre graf-after--p"><code class="markup--code markup--pre-code">auth_basic           &quot;Password protected content&quot;;<br>auth_basic_user_file /etc/nginx/htpasswd;</code></pre><p name="4a89" id="4a89" class="graf graf--p graf-after--pre">CloudFront can send HTTP headers when it accesses the origin so that you can add the auth header to its config. The auth header looks like this:</p><pre name="4198" id="4198" class="graf graf--pre graf-after--p"><code class="markup--code markup--pre-code">Authorization: Basic {base64encode({user}:{password})}</code></pre><p name="c0b0" id="c0b0" class="graf graf--p graf-after--pre">So, if your user name is abc and your password is 123 then the auth header will be:</p><pre name="bc9c" id="bc9c" class="graf graf--pre graf-after--p"><code class="markup--code markup--pre-code">Authorization: Basic YWJjOjEyMw==</code></pre><p name="a372" id="a372" class="graf graf--p graf-after--pre">The header can be generated by using any <a href="https://www.base64encode.org/" data-href="https://www.base64encode.org/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">online base64 encoder</a>. If you generated the header, add it to your origin’s config.</p><figure name="ce16" id="ce16" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*heyu-5qd9DU8mCwOnv936Q.png" data-width="800" data-height="225" src="https://cdn-images-1.medium.com/max/800/1*heyu-5qd9DU8mCwOnv936Q.png"></figure><p name="7e14" id="7e14" class="graf graf--p graf-after--figure">After the deployment, CloudFront will access your site to be publicly available through CloudFront, but the original site will be password protected. To protect your site, you can change the password monthly and set up <a href="https://www.fail2ban.org" data-href="https://www.fail2ban.org" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">fail2ban</a> to prevent brute force attacks.</p><p name="4667" id="4667" class="graf graf--p graf-after--p">The last thing that I wanted to talk about is invalidation. The default behavior of CloudFront is that it refreshes the content only once daily, so if you change something and don’t want to wait for a day, you must delete the cache. CloudFront uses invalidations to do it.</p><figure name="fc96" id="fc96" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*nfHFsVxx8SnCctr-26l5Nw.png" data-width="800" data-height="247" src="https://cdn-images-1.medium.com/max/800/1*nfHFsVxx8SnCctr-26l5Nw.png"></figure><p name="2e94" id="2e94" class="graf graf--p graf-after--figure">If you want to delete one or more files from the cache, you have to create an invalidation. Invalidation is a broadcast message to the edge servers to delete the given content. The invalidation parameter is a list of file paths that can contain *<em class="markup--em markup--p-em">.</em> If you want to fully delete the cache, use ‘/*’.</p><p name="a16e" id="a16e" class="graf graf--p graf-after--p">As you see, CloudFront is a perfect solution to scale your WordPress site and make it safe. By using it, your site can serve millions of users, and you need only a micro instance behind CloudFront. The solution is not WordPress specific. You can use it for any site that does not use server-side interactions.</p><p name="f51e" id="f51e" class="graf graf--p graf-after--p graf--trailing">In some cases, it needs a little bit of different thinking. For example, you have to use hosted comment services like Disqus or Facebook comments, or if you have a webshop on your site, you have to organize it to another domain as a separate service. But I think it’s a really low price for the safety and the seamless, fast, and scalable content serving.</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@thebojda" class="p-author h-card">Laszlo Fazekas</a> on <a href="https://medium.com/p/444c2c7df50e"><time class="dt-published" datetime="2022-08-29T15:44:31.222Z">August 29, 2022</time></a>.</p><p><a href="https://medium.com/@thebojda/how-to-make-your-wordpress-site-safe-and-fast-with-amazon-cloudfront-444c2c7df50e" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on September 27, 2022.</p></footer></article></body></html>

@@ -327,3 +327,15 @@ Introducing a decentralized metadata service for Ethereum
 Dive into the world of smart contracts with Zero-knowledge proof
 ](https://thebojda.github.io/my-medium-blog/posts/2022-03-07_Understanding-Zero-Knowledge-Proofs-Through-the-Source-Code-of-Tornado-Cash-41d335c5475f.html)
 
+[How to create an anonymous, unhackable voting system on the blockchain 
+…using the magic of zero-knowledge proofs
+](https://thebojda.github.io/my-medium-blog/posts/2022-04-02_How-to-create-an-anonymous--unhackable-voting-system-on-the-blockchain-ff6f932727b8.html)
+
+[How Machines Can Learn Using TensorFlow or PyTorch 
+A deep dive into their minds, their evolution
+](https://thebojda.github.io/my-medium-blog/posts/2022-05-25_How-Machines-Can-Learn-Using-TensorFlow-or-PyTorch-8f85cd04979d.html)
+
+[How To Make Your WordPress Site Safe and Fast With Amazon CloudFront 
+A brief guide to this highly recommended program
+](https://thebojda.github.io/my-medium-blog/posts/2022-08-29_How-To-Make-Your-WordPress-Site-Safe-and-Fast-With-Amazon-CloudFront-444c2c7df50e.html)
+
