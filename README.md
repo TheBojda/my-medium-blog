@@ -339,3 +339,5 @@ A deep dive into their minds, their evolution
 A brief guide to this highly recommended program
 ](https://thebojda.github.io/my-medium-blog/posts/2022-08-29_How-To-Make-Your-WordPress-Site-Safe-and-Fast-With-Amazon-CloudFront-444c2c7df50e.html)
 
+[How to Change the World?! Pocket Guide for People With a Messiah Complex ](https://thebojda.github.io/my-medium-blog/posts/2022-11-05_How-to-Change-the-World---Pocket-Guide-for-People-With-a-Messiah-Complex-dd2d16bb92a.html)
+
