@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>How GIT Works Deep Inside</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">How GIT Works Deep Inside</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+If you are a programmer, you probably use GIT. But have you ever wondered how GIT is working deep inside? I do. Fortunately, you can find…
+</section>
+<section data-field="body" class="e-content">
+<section name="d656" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="c387" id="c387" class="graf graf--h3 graf--leading graf--title">How GIT Works Deep Inside</h3><figure name="6d41" id="6d41" class="graf graf--figure graf-after--h3"><img class="graf-image" data-image-id="1*-wf8p7xtWohb67D9yNIxug.jpeg" data-width="1400" data-height="933" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*-wf8p7xtWohb67D9yNIxug.jpeg"><figcaption class="imageCaption">source: pexels.com</figcaption></figure><p name="d804" id="d804" class="graf graf--p graf-after--figure">If you are a programmer, you probably use GIT. But have you ever wondered how GIT is working deep inside? I do. Fortunately, you can find many documents on the web about <a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects" data-href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">GIT internals</a>. When I read them, I have to realize that GIT is a relatively simple but super genius system, and it uses the same hash-based storage that is used in distributed filesystems like <a href="https://ipfs.tech/" data-href="https://ipfs.tech/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">IPFS</a> or <a href="https://www.ethswarm.org/" data-href="https://www.ethswarm.org/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Ethereum Swarm</a>. In this article, I will show you, how GIT works deep inside.</p><p name="dc82" id="dc82" class="graf graf--p graf-after--p">When you clone your favorite repo from GitHub or any other git repository, you will get the files and a .git folder. This single .git folder contains everything. It’s not a problem if you delete the other files, you can simply restore them by a ‘checkout’ command. It’s possible because the whole file tree is described in the .git folder.</p><p name="da37" id="da37" class="graf graf--p graf-after--p">Let’s see into the .git folder. It contains some files and folders. One of the most important is the objects folder. Git is something like a special filesystem that stores file with the same content only once. If you have different folders that contain the same file, the content will be stored only once. When you store a file in the Git repo, it will calculate the <a href="https://en.wikipedia.org/wiki/SHA-1" data-href="https://en.wikipedia.org/wiki/SHA-1" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">SHA1</a> hash of the file, and store it in the objects folder. If the file exists in different places in the tree, it will be stored only once, because SHA1 will maps the same content to the same file.</p><p name="185a" id="185a" class="graf graf--p graf-after--p">The SHA1 hash of the content is 20 bytes. The first byte (2 hex characters) defines the folder in the objects folder, and the other 19 bytes (38 hex characters) will be the name of the file. For example, if the content hash is 10116ede2f0bcf2ec0720843616e4a5250ae5268 then it will be mapped to objects/10/116ede2f0bcf2ec0720843616e4a5250ae5268.</p><p name="372c" id="372c" class="graf graf--p graf-after--p">If you cloned the repository and haven’t changed anything, you will probably not find any object file, only a pack folder and a .pack file in it. It is an optimization. Git pulls the object files in one pack file from the server. You can simply unpack this single file if you move it outside of the .git directory and run</p><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="bash" name="4fa7" id="4fa7" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content">git unpack-objects &lt; ./{pack_file_name}.pack</span></pre><p name="7248" id="7248" class="graf graf--p graf-after--pre">This command will unpack the objects into the objects folder in the above format.</p><p name="1a34" id="1a34" class="graf graf--p graf-after--p">The object files are zip-ed, so, if you open one of them, you won’t be able to read it, but you can easily unzip it by the following command:</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="bash" name="0785" id="0785" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content">pigz -d &lt; ./.git/objects/10/116ede2f0bcf2ec0720843616e4a5250ae5268</span></pre><p name="e478" id="e478" class="graf graf--p graf-after--pre">The objects are organized into trees. A tree is something like a folder in a filesystem stored in another file in the objects folder. A tree looks like this:</p><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="shell" name="6fb7" id="6fb7" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content">100644 blob 5f71dbb20efc1dc9bd95e116ebc403659556b58a	.gitignore<br />100644 blob f288702d2fa16d3cdf0035b15a9fcbc552cd88e7	LICENSE<br />100644 blob 49e96aecc3c354402c153d759e900354cfcb7c80	README.md<br />040000 tree 7054d5d9fd2431c4ff4f27537d6a5388b3c73ca9	database<br />100644 blob 9b50d8c47e0ad56aab6aa570f344c6db5409a955	env.development<br />100644 blob a473235e1bf1461feef090b2a62b2066d75c7d97	env.template<br />100644 blob a0f18dc0b81d5122a8eeca6903868f1ea4721ebc	package.json<br />040000 tree ae9e90c2dcc818fab099dd22093ac5e5adb87bbb	public<br />040000 tree 0bef5a72fa773367998e501275c262bb0ec75544	scripts<br />040000 tree 878c06bb25e1752fa6271c6eef51edad0942c3ff	src<br />100644 blob 604c913eebc2578696d37b7346be681db2591816	tsconfig.json<br />040000 tree cdd80d4ee72ce05a172e9d6bc05b2d946767d079	views</span></pre><p name="46fb" id="46fb" class="graf graf--p graf-after--pre">This output is generated by the git cat-file command, which can read and parse any file from the objects folder by hash. The above output is generated by:</p><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="bash" name="43fb" id="43fb" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content">git cat-file -p 54ca9b88af96f27e181b9a059ca4be1f60e720ba</span></pre><p name="bd72" id="bd72" class="graf graf--p graf-after--pre">The first column shows a Linux-like file mode, the second column shows the object type, the third column is an object hash and the last column is the filename. A Git tree is very similar to a Linux folder that can contain files (blobs) and other folders (tree). If you would, you can check the content of some of the files or trees by using the commands that we used before.</p><p name="6e51" id="6e51" class="graf graf--p graf-after--p">Git can be imagined as a virtual filesystem, where every branch and every commit in the branches are folders. When you do a checkout you copy the contents of the chosen folder outside of the .git directory. In a standard filesystem, this needs a huge amount of disk space, but because of the clever hash-based and compressed solution of Git, it is stored in an optimal way.</p><p name="cb9a" id="cb9a" class="graf graf--p graf-after--p">Creating a branch would need a full directory copy in a standard filesystem, but Git only generates one single file that points to the tree of the source of the branch. If you change a file and do a commit, only a commit object is generated that points to the changed tree that contains the file (3 files instead of a full directory copy).</p><p name="852a" id="852a" class="graf graf--p graf-after--p">Every commit contains the hash of the previous commit (like a blockchain), so the history is fully trackable. This makes this special filesystem a version control system.</p><p name="78d8" id="78d8" class="graf graf--p graf-after--p">When you pull or push, Git sends these object files to the other part in a packed format. Because of hash-based naming, the objects will never collide. You could simply copy every object from every Git repository in the world to a single folder without any problem. This is why forking a repository on GitHub needs only a few seconds. GitHub doesn’t copy anything, only creates an entry in the database similar to branching.</p><p name="2ccd" id="2ccd" class="graf graf--p graf-after--p">In nutshell, this is how Git works. IPFS or Ethereum Swarm also uses this hash-based representation. The difference is that these systems add a discovery protocol to it to find the given hashes in the distributed network of storage nodes.</p><p name="ebb9" id="ebb9" class="graf graf--p graf-after--p">Mixing the discovery system of these decentralized filesystems and Git versioning abilities could be the base of a fully decentralized GitHub alternative, but it is another story…</p><p name="5ce8" id="5ce8" class="graf graf--p graf-after--p graf--trailing">If you want to know Git more deeply, you can find everything on the <a href="https://git-scm.com/" data-href="https://git-scm.com/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Git website</a> or in the <a href="https://git-scm.com/book?ref=hackernoon.com" data-href="https://git-scm.com/book?ref=hackernoon.com" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Git book</a>.</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@thebojda" class="p-author h-card">Laszlo Fazekas</a> on <a href="https://medium.com/p/39daa38dfceb"><time class="dt-published" datetime="2022-11-20T19:45:52.576Z">November 20, 2022</time></a>.</p><p><a href="https://medium.com/@thebojda/how-git-works-deep-inside-39daa38dfceb" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on December 27, 2022.</p></footer></article></body></html>

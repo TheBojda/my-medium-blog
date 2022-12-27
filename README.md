@@ -341,3 +341,9 @@ A brief guide to this highly recommended program
 
 [How to Change the World?! Pocket Guide for People With a Messiah Complex ](https://thebojda.github.io/my-medium-blog/posts/2022-11-05_How-to-Change-the-World---Pocket-Guide-for-People-With-a-Messiah-Complex-dd2d16bb92a.html)
 
+[How GIT Works Deep Inside ](https://thebojda.github.io/my-medium-blog/posts/2022-11-20_How-GIT-Works-Deep-Inside-39daa38dfceb.html)
+
+[Why Tesla’s Optimus Is a Big Step on the Way to AGI ](https://thebojda.github.io/my-medium-blog/posts/2022-11-23_Why-Tesla-s-Optimus-Is-a-Big-Step-on-the-Way-to-AGI-548abb0343f3.html)
+
+[What are the differences between IPFS and Ethereum Swarm? ](https://thebojda.github.io/my-medium-blog/posts/2022-12-23_What-are-the-differences-between-IPFS-and-Ethereum-Swarm--c0e11f9a928b.html)
+
