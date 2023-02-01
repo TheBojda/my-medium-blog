@@ -347,3 +347,15 @@ A brief guide to this highly recommended program
 
 [What are the differences between IPFS and Ethereum Swarm? ](https://thebojda.github.io/my-medium-blog/posts/2022-12-23_What-are-the-differences-between-IPFS-and-Ethereum-Swarm--c0e11f9a928b.html)
 
+[How I Migrated My WordPress Site to GitHub Pages 
+A step-by-step guide to a brand-new website
+](https://thebojda.github.io/my-medium-blog/posts/2023-01-02_How-I-Migrated-My-WordPress-Site-to-GitHub-Pages-842afd262f9a.html)
+
+[Zero-Knowledge Proofs Using SnarkJS and Circom 
+A JavaScript tutorial
+](https://thebojda.github.io/my-medium-blog/posts/2023-01-10_Zero-Knowledge-Proofs-Using-SnarkJS-and-Circom-fac6c4d63202.html)
+
+[How I Built an Anonymous Voting System on the Ethereum Blockchain Using Zero-Knowledge Proof ](https://thebojda.github.io/my-medium-blog/posts/2023-01-23_How-I-Built-an-Anonymous-Voting-System-on-the-Ethereum-Blockchain-Using-Zero-Knowledge-Proof-d5ab286228fd.html)
+
+[An introduction of zk-merkle-tree, a JavaScript library for anonymous voting on Ethereum using… ](https://thebojda.github.io/my-medium-blog/posts/2023-01-30_An-introduction-of-zk-merkle-tree--a-JavaScript-library-for-anonymous-voting-on-Ethereum-using--79caa3415d1e.html)
+
