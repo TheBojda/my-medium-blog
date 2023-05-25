@@ -127,8 +127,6 @@ avagy a közösségi pénz
 aka how to build simulated realities
 ](https://thebojda.github.io/my-medium-blog/posts/2018-01-13_Megaminds--abstract-evolution-and-the-consistency-machine--d2915a719443.html)
 
-[I think, we will never be able to build perfect simulated realities by simulation of particles… ](https://thebojda.github.io/my-medium-blog/posts/2018-01-14_I-think--we-will-never-be-able-to-build-perfect-simulated-realities-by-simulation-of-particles--f4037ee50f1e.html)
-
 [Helyzetjelentés: World Summit, Fokváros vízhiány ](https://thebojda.github.io/my-medium-blog/posts/2018-02-13_Helyzetjelent-s--World-Summit--Fokv-ros-v-zhi-ny-b368a434db6a.html)
 
 [Lemondással jár-e a fenntarthatóság?! ](https://thebojda.github.io/my-medium-blog/posts/2018-03-01_Lemond-ssal-j-r-e-a-fenntarthat-s-g---d8d6639f7b8.html)
@@ -154,8 +152,6 @@ Gabriel barátom hívta fel a figyelmemet az alábbi Twitter postra.
 [ERC-1155: non-fungible tokens on steroids 
 …or let’s cut CryptoKitties
 ](https://thebojda.github.io/my-medium-blog/posts/2018-08-02_ERC-1155--non-fungible-tokens-on-steroids-71aab96fa674.html)
-
-[ERC-1155 is a great standard. ](https://thebojda.github.io/my-medium-blog/posts/2018-08-05_ERC-1155-is-a-great-standard--69af17664b2e.html)
 
 [ERC-223: ERC-20-as tokenek kis extrával #ethereumtudas ](https://thebojda.github.io/my-medium-blog/posts/2018-08-08_ERC-223--ERC-20-as-tokenek-kis-extr-val--ethereumtudas-33f207811139.html)
 
@@ -281,8 +277,6 @@ Neurális hálózatok tenyésztése genetikus algoritmussal PyGAD és OpenAI Gym
 IPNS, DNSLink és blokklánc alapú címzés #ethereumtudas
 ](https://thebojda.github.io/my-medium-blog/posts/2021-03-24_N-vszolg-ltat-sok-IPFS-hez-c1c5394daacd.html)
 
-[I think the main problem is that deep learning is not AI in general meaning. ](https://thebojda.github.io/my-medium-blog/posts/2021-04-18_I-think-the-main-problem-is-that-deep-learning-is-not-AI-in-general-meaning--62d62e2b2796.html)
-
 [Running MacOS in a Linux virtual machine with sosumi 
 aka iOS development on Linux
 ](https://thebojda.github.io/my-medium-blog/posts/2021-05-15_Running-MacOS-in-a-Linux-virtual-machine-with-sosumi-bb3e012f5ddf.html)
@@ -358,4 +352,10 @@ A JavaScript tutorial
 [How I Built an Anonymous Voting System on the Ethereum Blockchain Using Zero-Knowledge Proof ](https://thebojda.github.io/my-medium-blog/posts/2023-01-23_How-I-Built-an-Anonymous-Voting-System-on-the-Ethereum-Blockchain-Using-Zero-Knowledge-Proof-d5ab286228fd.html)
 
 [An introduction of zk-merkle-tree, a JavaScript library for anonymous voting on Ethereum using… ](https://thebojda.github.io/my-medium-blog/posts/2023-01-30_An-introduction-of-zk-merkle-tree--a-JavaScript-library-for-anonymous-voting-on-Ethereum-using--79caa3415d1e.html)
+
+[The First Moment of the Singularity (Co-Written by OpenAI Text-Davinci-003) ](https://thebojda.github.io/my-medium-blog/posts/2023-04-07_The-First-Moment-of-the-Singularity--Co-Written-by-OpenAI-Text-Davinci-003--30e906a248c3.html)
+
+[How LLMs like ChatGPT can use plugins and tools 
+Spoken language is only the first step because anything can be tokenized
+](https://thebojda.github.io/my-medium-blog/posts/2023-05-03_How-LLMs-like-ChatGPT-can-use-plugins-and-tools-2d0571869e01.html)
 
