@@ -359,3 +359,5 @@ A JavaScript tutorial
 Spoken language is only the first step because anything can be tokenized
 ](https://thebojda.github.io/my-medium-blog/posts/2023-05-03_How-LLMs-like-ChatGPT-can-use-plugins-and-tools-2d0571869e01.html)
 
+[Why Brain-Machine Interfaces Will Be Human Kind’s Greatest Invention ](https://thebojda.github.io/my-medium-blog/posts/2023-06-23_Why-Brain-Machine-Interfaces-Will-Be-Human-Kind-s-Greatest-Invention-d4de84197e6b.html)
+
