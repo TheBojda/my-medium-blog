@@ -281,7 +281,7 @@ IPNS, DNSLink és blokklánc alapú címzés #ethereumtudas
 aka iOS development on Linux
 ](https://thebojda.github.io/my-medium-blog/posts/2021-05-15_Running-MacOS-in-a-Linux-virtual-machine-with-sosumi-bb3e012f5ddf.html)
 
-[Code A Minimalistic NFT Smart Contract in Solidity On Ethereum: A How-To Guide | Hacker Noon ](https://thebojda.github.io/my-medium-blog/posts/2021-05-22_Code-A-Minimalistic-NFT-Smart-Contract-in-Solidity-On-Ethereum--A-How-To-Guide---Hacker-Noon-5cb72f0891c.html)
+[Code A Minimalistic NFT Smart Contract in Solidity On Ethereum: A How-To Guide ](https://thebojda.github.io/my-medium-blog/posts/2021-05-22_Code-A-Minimalistic-NFT-Smart-Contract-in-Solidity-On-Ethereum--A-How-To-Guide---Hacker-Noon-5cb72f0891c.html)
 
 [Docker alapozó ](https://thebojda.github.io/my-medium-blog/posts/2021-07-15_Docker-alapoz--b8efb6aa68e9.html)
 
@@ -360,4 +360,6 @@ Spoken language is only the first step because anything can be tokenized
 ](https://thebojda.github.io/my-medium-blog/posts/2023-05-03_How-LLMs-like-ChatGPT-can-use-plugins-and-tools-2d0571869e01.html)
 
 [Why Brain-Machine Interfaces Will Be Human Kind’s Greatest Invention ](https://thebojda.github.io/my-medium-blog/posts/2023-06-23_Why-Brain-Machine-Interfaces-Will-Be-Human-Kind-s-Greatest-Invention-d4de84197e6b.html)
+
+[Karma: An ERC20-compatible Alternative Money on the Ethereum Blockchain ](https://thebojda.github.io/my-medium-blog/posts/2023-09-13_Karma--An-ERC20-compatible-Alternative-Money-on-the-Ethereum-Blockchain-cee660b821ce.html)
 

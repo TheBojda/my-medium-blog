@@ -36,6 +36,12 @@ class TitleExtractor(HTMLParser):
             return ''
         return self.subtitle
 
+def cleanup(str):
+    if '|' in str:
+        parts = str.split('|')
+        return parts[0]
+    else:
+        return str
 
 readme_file = open('README.md', 'w')
 readme_file.write('''
@@ -54,6 +60,6 @@ for post in files:
     parser = TitleExtractor()
     parser.feed(html)
     readme_file.write(
-        '[' + parser.get_title() + ' ' + parser.get_subtitle() + '](' + 'https://thebojda.github.io/my-medium-blog/posts/' + post + ')\n\n')
+        '[' + cleanup(parser.get_title() + ' ' + parser.get_subtitle()) + '](' + 'https://thebojda.github.io/my-medium-blog/posts/' + post + ')\n\n')
 
 readme_file.close()
