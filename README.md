@@ -363,3 +363,13 @@ Spoken language is only the first step because anything can be tokenized
 
 [Karma: An ERC20-compatible Alternative Money on the Ethereum Blockchain ](https://thebojda.github.io/my-medium-blog/posts/2023-09-13_Karma--An-ERC20-compatible-Alternative-Money-on-the-Ethereum-Blockchain-cee660b821ce.html)
 
+[Decentralized ActivityPub Could Be the Future of Social Networks ](https://thebojda.github.io/my-medium-blog/posts/2023-10-19_Decentralized-ActivityPub-Could-Be-the-Future-of-Social-Networks-e6db406b5db0.html)
+
+[How To Sign EIP-712 Structured Data With MetaMask ](https://thebojda.github.io/my-medium-blog/posts/2023-10-30_How-To-Sign-EIP-712-Structured-Data-With-MetaMask-35df217a1ab4.html)
+
+[Zero-Knowledge Group Membership Management With the Semaphore Protocol ](https://thebojda.github.io/my-medium-blog/posts/2023-11-12_Zero-Knowledge-Group-Membership-Management-With-the-Semaphore-Protocol-1a63126de81c.html)
+
+[A Concept of Distributed Artificial Intelligence aka a New Type of World Wide Web ](https://thebojda.github.io/my-medium-blog/posts/2023-12-03_A-Concept-of-Distributed-Artificial-Intelligence-aka-a-New-Type-of-World-Wide-Web-48c96da2a528.html)
+
+[A Christmas Story (after the technological singularity) ](https://thebojda.github.io/my-medium-blog/posts/2023-12-26_A-Christmas-Story--after-the-technological-singularity--a7a6419b71b2.html)
+
