@@ -47,7 +47,7 @@ readme_file = open('README.md', 'w')
 readme_file.write('''
 # My Medium Blog
 
-This is a backup of my Medium blog. [https://medium.com/@thebojda](https://medium.com/@thebojda)
+This is a backup of my Medium blog. [https://thebojda.medium.com/](https://thebojda.medium.com/)
  
 ''')
 
@@ -60,6 +60,6 @@ for post in files:
     parser = TitleExtractor()
     parser.feed(html)
     readme_file.write(
-        '[' + cleanup(parser.get_title() + ' ' + parser.get_subtitle()) + '](' + 'https://thebojda.github.io/my-medium-blog/posts/' + post + ')\n\n')
+        '[' + cleanup(parser.get_title() + ' ' + parser.get_subtitle()) + '](' + 'https://thebojda.myethmeta.org/posts/' + post + ')\n\n')
 
 readme_file.close()
