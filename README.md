@@ -1,7 +1,7 @@
 
 # My Medium Blog
 
-This is a backup of my Medium blog. [https://thebojda.medium.com/](https://thebojda.medium.com/)
+This is a backup of my Medium blog. [https://thebojda.medium.com/](https://thebojda.medium.com/), generated from: [https://github.com/TheBojda/my-medium-blog](https://github.com/TheBojda/my-medium-blog)
  
 [Megoldást jelenthet-e a szimulált valóság az emberiség összes problémájára? ](https://thebojda.myethmeta.org/posts/2012-10-19_Megold-st-jelenthet-e-a-szimul-lt-val-s-g-az-emberis-g--sszes-probl-m-j-ra--3d336857c51b.html)
 
