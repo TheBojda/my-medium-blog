@@ -47,7 +47,7 @@ readme_file = open('README.md', 'w')
 readme_file.write('''
 # My Medium Blog
 
-This is a backup of my Medium blog. [https://thebojda.medium.com/](https://thebojda.medium.com/)
+This is a backup of my Medium blog. [https://thebojda.medium.com/](https://thebojda.medium.com/), generated from: https://github.com/TheBojda/my-medium-blog
  
 ''')
 
