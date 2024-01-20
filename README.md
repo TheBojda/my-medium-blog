@@ -373,3 +373,7 @@ Spoken language is only the first step because anything can be tokenized
 
 [A Christmas Story (after the technological singularity) ](https://thebojda.myethmeta.org/posts/2023-12-26_A-Christmas-Story--after-the-technological-singularity--a7a6419b71b2.html)
 
+[How to Implement a Minimalist NFT zkRollup ](https://thebojda.myethmeta.org/posts/2024-01-05_How-to-Implement-a-Minimalist-NFT-zkRollup-b93fd4e326ad.html)
+
+[A Microscope Built from Flesh and Bones Could Revolutionize Healthcare and Brain-Machine Interfaces ](https://thebojda.myethmeta.org/posts/2024-01-13_A-Microscope-Built-from-Flesh-and-Bones-Could-Revolutionize-Healthcare-and-Brain-Machine-Interfaces-f48f83c59e5f.html)
+
