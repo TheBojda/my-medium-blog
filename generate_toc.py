@@ -52,7 +52,7 @@ This is a backup of my Medium blog. [https://thebojda.medium.com/](https://thebo
 ''')
 
 files = os.listdir('posts')
-files.sort()
+files.sort(reverse=True)
 for post in files:
     file = open('posts/' + post)
     html = file.read()
