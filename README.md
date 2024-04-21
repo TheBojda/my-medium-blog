@@ -1,7 +1,7 @@
 
 # My Medium Blog
 
-This is a backup of my Medium blog. [https://thebojda.medium.com/](https://thebojda.medium.com/), generated from: https://github.com/TheBojda/my-medium-blog
+This is a backup of my Medium blog. [https://thebojda.medium.com](https://thebojda.medium.com), generated from: [https://github.com/TheBojda/my-medium-blog](https://github.com/TheBojda/my-medium-blog)
  
 [What is Thermodynamic Computing and how does it help AI development?! ](https://thebojda.myethmeta.org/posts/2024-04-05_What-is-Thermodynamic-Computing-and-how-does-it-help-AI-development---1dd3b75a9ee6.html)
 
