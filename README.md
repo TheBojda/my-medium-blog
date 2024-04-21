@@ -3,6 +3,10 @@
 
 This is a backup of my Medium blog. [https://thebojda.medium.com/](https://thebojda.medium.com/), generated from: https://github.com/TheBojda/my-medium-blog
  
+[What is Thermodynamic Computing and how does it help AI development?! ](https://thebojda.myethmeta.org/posts/2024-04-05_What-is-Thermodynamic-Computing-and-how-does-it-help-AI-development---1dd3b75a9ee6.html)
+
+[The enormous potential of binarized and 1,58-bit neural networks ](https://thebojda.myethmeta.org/posts/2024-03-21_The-enormous-potential-of-binarized-and-1-58-bit-neural-networks-e4209766f6f3.html)
+
 [A Microscope Built from Flesh and Bones Could Revolutionize Healthcare and Brain-Machine Interfaces ](https://thebojda.myethmeta.org/posts/2024-01-13_A-Microscope-Built-from-Flesh-and-Bones-Could-Revolutionize-Healthcare-and-Brain-Machine-Interfaces-f48f83c59e5f.html)
 
 [How to Implement a Minimalist NFT zkRollup ](https://thebojda.myethmeta.org/posts/2024-01-05_How-to-Implement-a-Minimalist-NFT-zkRollup-b93fd4e326ad.html)

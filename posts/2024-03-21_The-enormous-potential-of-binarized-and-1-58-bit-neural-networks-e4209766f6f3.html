@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>The enormous potential of binarized and 1,58-bit neural networks</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">The enormous potential of binarized and 1,58-bit neural networks</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+Quantization is a frequently used method to reduce the memory and computational capacity requirements of our machine learning models…
+</section>
+<section data-field="body" class="e-content">
+<section name="c63f" class="section section--body section--first"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="eadf" id="eadf" class="graf graf--h3 graf--leading graf--title">The enormous potential of binarized and 1,58-bit neural networks</h3><figure name="83c5" id="83c5" class="graf graf--figure graf-after--h3"><img class="graf-image" data-image-id="0*nJdX0FrMkdNkhPCJ" data-width="1792" data-height="1024" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/0*nJdX0FrMkdNkhPCJ"></figure><p name="c5d0" id="c5d0" class="graf graf--p graf-after--figure"><a href="https://huggingface.co/docs/optimum/concept_guides/quantization" data-href="https://huggingface.co/docs/optimum/concept_guides/quantization" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Quantization</a> is a frequently used method to reduce the memory and computational capacity requirements of our machine learning models. During quantization, we use less precise data formats, such as 8-bit integers (int8), to represent weights. This not only reduces computational capacity and memory requirements but also decreases energy consumption.</p><p name="ab0c" id="ab0c" class="graf graf--p graf-after--p">The extreme form of quantization is binarization, meaning the use of 1-bit weights. One might think that neural networks would become non-functional with such low precision, but, in many cases, this level of simplification does not significantly degrade the quality of the network.</p><p name="e48d" id="e48d" class="graf graf--p graf-after--p">The following video demonstrates the possibilities of such 1-bit (binarized) neural networks:</p><figure name="516c" id="516c" class="graf graf--figure graf--iframe graf-after--p"><iframe src="https://www.youtube.com/embed/d9AeVyRzU5Q?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe></figure><p name="0578" id="0578" class="graf graf--p graf-after--figure">A paper was recently published under the title “<a href="https://arxiv.org/pdf/2402.17764.pdf" data-href="https://arxiv.org/pdf/2402.17764.pdf" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits</a>”. The difference from binarization here is that it uses three values, {-1,0,1}. This is why the authors call this architecture a 1.58-bit network. In the paper, the authors prove that networks using these 1.58-bit weights do not perform much worse than their counterparts using 8-bit weights.</p><p name="5230" id="5230" class="graf graf--p graf-after--p">Why is this such a big deal?</p><p name="8dcc" id="8dcc" class="graf graf--p graf-after--p">If these three values are sufficient to represent the weights, then multiplication, currently the most frequently used operation in neural networks, is no longer necessary. This is why GPU clusters are used for neural networks, as GPUs can perform multiplications very efficiently. Without the need for multiplications, there’s no need for GPUs, and the models can be run efficiently even on CPUs, or it’s possible to build specialized hardware (ASIC) that can (even in an analog way) run these 1.58-bit networks.</p><p name="648f" id="648f" class="graf graf--p graf-after--p">One of the most hyped tech news stories recently was about the company <a href="https://groq.com/" data-href="https://groq.com/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Groq</a> developing an ASIC (Application-Specific Integrated Circuit) that can run LLMs much more efficiently and with less energy than traditional GPUs. In the future, new types of circuits could be developed that, instead of the usual 2 voltage levels, work with 3, thus being able to natively handle the 3 values.</p><p name="1d9d" id="1d9d" class="graf graf--p graf-after--p">Quantization is typically a post-training process. Thus, the training is done with high-precision numbers, and the quantized weights are calculated in the next phase. As a result, running the networks becomes much more efficient, enabling the possibility to run the model even on IoT devices with limited computational capacity.</p><p name="92b1" id="92b1" class="graf graf--p graf-after--p">Since gradient-based training does not work with 1-bit or binarized networks, non-gradient-based technologies become relevant, like genetic algorithms or other gradient-free technologies. There are open-source libraries like <a href="https://pygad.readthedocs.io/en/latest/" data-href="https://pygad.readthedocs.io/en/latest/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">PyGAD</a> for genetic algorithms or <a href="https://facebookresearch.github.io/nevergrad/" data-href="https://facebookresearch.github.io/nevergrad/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">nevergrad</a> for other gradient-free methods, that work well with the most popular machine learning frameworks.</p><p name="e569" id="e569" class="graf graf--p graf-after--p">A few years ago, I also addressed in an article that the use of genetic algorithms can be effective in the case of reinforcement learning:</p><div name="78c7" id="78c7" class="graf graf--mixtapeEmbed graf-after--p"><a href="https://thebojda.medium.com/how-genetic-algorithms-can-compete-with-gradient-descent-and-backprop-30b59d5b1ac0" data-href="https://thebojda.medium.com/how-genetic-algorithms-can-compete-with-gradient-descent-and-backprop-30b59d5b1ac0" class="markup--anchor markup--mixtapeEmbed-anchor" title="https://thebojda.medium.com/how-genetic-algorithms-can-compete-with-gradient-descent-and-backprop-30b59d5b1ac0"><strong class="markup--strong markup--mixtapeEmbed-strong">How Genetic Algorithms Can Compete with Gradient Descent and Backprop</strong><br><em class="markup--em markup--mixtapeEmbed-em">Although the standard way of training neural networks is gradient descent and backpropagation, some other players are…</em>thebojda.medium.com</a><a href="https://thebojda.medium.com/how-genetic-algorithms-can-compete-with-gradient-descent-and-backprop-30b59d5b1ac0" class="js-mixtapeImage mixtapeImage u-ignoreBlock" data-media-id="1b6fbf46ff821d7193752a2bc7874d05" data-thumbnail-img-id="1*mudAgBfBxHH5IoEd6c3rLA.png" style="background-image: url(https://cdn-images-1.medium.com/fit/c/160/160/1*mudAgBfBxHH5IoEd6c3rLA.png);"></a></div><p name="fe90" id="fe90" class="graf graf--p graf-after--mixtapeEmbed">Although in most cases backpropagation is much more efficient than gradient-free solutions, 1-bit networks can be run much more efficiently on specialized hardware than their floating-point counterparts. So, it might be that with backpropagation, we find the optimal network 10 times faster using floating-point numbers than with, say, genetic algorithms. But if the 1-bit network runs 20 times faster (on specialized hardware), then training will still be twice as fast using genetic algorithms. Investigating how effectively 1-bit networks can be trained with gradient-free methods could be a very interesting research topic.</p><p name="7380" id="7380" class="graf graf--p graf-after--p">Another reason why this topic is so fascinating is that these networks more closely resemble the neural networks found in the natural brain (biologically plausible). Therefore, I believe that by choosing a good gradient-free training algorithm and applying these 1-bit networks, we can build systems that are much more similar to the human brain. Moreover, this opens up the possibility for technological solutions beyond ASICs that were previously not feasible, such as analog, light-based, or even biologically based processors.</p><p name="1798" id="1798" class="graf graf--p graf-after--p graf--trailing">This direction might turn out to be a dead-end in the long run, but for now, its enormous potential is apparent, making it a very promising research avenue for anyone involved in the field of artificial intelligence.</p></div></div></section><section name="31d4" class="section section--body section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><p name="84f1" id="84f1" class="graf graf--p graf--leading">Visit us at <a href="https://www.datadriveninvestor.com/" data-href="https://www.datadriveninvestor.com/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank"><em class="markup--em markup--p-em">DataDrivenInvestor.com</em></a></p><p name="5b39" id="5b39" class="graf graf--p graf-after--p">Subscribe to DDIntel <a href="https://www.ddintel.com/" data-href="https://www.ddintel.com/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank"><em class="markup--em markup--p-em">here</em></a>.</p><p name="cf3d" id="cf3d" class="graf graf--p graf-after--p">Featured Article:</p><div name="4a37" id="4a37" class="graf graf--mixtapeEmbed graf-after--p"><a href="https://medium.datadriveninvestor.com/accelerating-success-through-the-singapore-fund-asset-management-platform-cbd393bf0e6a" data-href="https://medium.datadriveninvestor.com/accelerating-success-through-the-singapore-fund-asset-management-platform-cbd393bf0e6a" class="markup--anchor markup--mixtapeEmbed-anchor" title="https://medium.datadriveninvestor.com/accelerating-success-through-the-singapore-fund-asset-management-platform-cbd393bf0e6a"><strong class="markup--strong markup--mixtapeEmbed-strong">Accelerating Success Through the Singapore Fund/Asset Management Platform</strong><br><em class="markup--em markup--mixtapeEmbed-em">Introduction</em>medium.datadriveninvestor.com</a><a href="https://medium.datadriveninvestor.com/accelerating-success-through-the-singapore-fund-asset-management-platform-cbd393bf0e6a" class="js-mixtapeImage mixtapeImage u-ignoreBlock" data-media-id="044b13a92e7397c013f2bd0f8426ccaa" data-thumbnail-img-id="0*4xL3JmoxbtnjpgW8" style="background-image: url(https://cdn-images-1.medium.com/fit/c/160/160/0*4xL3JmoxbtnjpgW8);"></a></div><p name="e0f8" id="e0f8" class="graf graf--p graf-after--mixtapeEmbed">Join our creator ecosystem <a href="https://join.datadriveninvestor.com/" data-href="https://join.datadriveninvestor.com/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank"><em class="markup--em markup--p-em">here</em></a>.</p><p name="1e3f" id="1e3f" class="graf graf--p graf-after--p">DDI Official Telegram Channel: <a href="https://t.me/+tafUp6ecEys4YjQ1" data-href="https://t.me/+tafUp6ecEys4YjQ1" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">https://t.me/+tafUp6ecEys4YjQ1</a></p><p name="108b" id="108b" class="graf graf--p graf-after--p graf--trailing">Follow us on <a href="https://www.linkedin.com/company/data-driven-investor" data-href="https://www.linkedin.com/company/data-driven-investor" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank"><em class="markup--em markup--p-em">LinkedIn</em></a>, <a href="https://twitter.com/@DDInvestorHQ" data-href="https://twitter.com/@DDInvestorHQ" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank"><em class="markup--em markup--p-em">Twitter</em></a>, <a href="https://www.youtube.com/c/datadriveninvestor" data-href="https://www.youtube.com/c/datadriveninvestor" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank"><em class="markup--em markup--p-em">YouTube</em></a>, and <a href="https://www.facebook.com/datadriveninvestor" data-href="https://www.facebook.com/datadriveninvestor" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank"><em class="markup--em markup--p-em">Facebook</em></a>.</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@thebojda" class="p-author h-card">Laszlo Fazekas</a> on <a href="https://medium.com/p/e4209766f6f3"><time class="dt-published" datetime="2024-03-21T12:37:50.553Z">March 21, 2024</time></a>.</p><p><a href="https://medium.com/@thebojda/the-enormous-potential-of-binarized-and-1-58-bit-neural-networks-e4209766f6f3" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on April 21, 2024.</p></footer></article></body></html>
