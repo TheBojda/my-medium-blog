@@ -3,6 +3,12 @@
 
 This is a backup of my Medium blog. [https://thebojda.medium.com](https://thebojda.medium.com), generated from: [https://github.com/TheBojda/my-medium-blog](https://github.com/TheBojda/my-medium-blog)
  
+[Boltzmann Brains, Matrioshka Brains, Simulation Hypothesis, and a Concept of God ](https://thebojda.myethmeta.org/posts/2024-06-16_Boltzmann-Brains--Matrioshka-Brains--Simulation-Hypothesis--and-a-Concept-of-God-dcd2ff76d7e4.html)
+
+[The Silicon Hospital, where healing becomes a software problem ](https://thebojda.myethmeta.org/posts/2024-05-18_The-Silicon-Hospital--where-healing-becomes-a-software-problem-57cb9026260a.html)
+
+[Analyzing MRI Scans With AI (Tensorflow) Is Easier Than You Think ](https://thebojda.myethmeta.org/posts/2024-05-03_Analyzing-MRI-Scans-With-AI--Tensorflow--Is-Easier-Than-You-Think-8a842683e191.html)
+
 [What is Thermodynamic Computing and how does it help AI development?! ](https://thebojda.myethmeta.org/posts/2024-04-05_What-is-Thermodynamic-Computing-and-how-does-it-help-AI-development---1dd3b75a9ee6.html)
 
 [The enormous potential of binarized and 1,58-bit neural networks ](https://thebojda.myethmeta.org/posts/2024-03-21_The-enormous-potential-of-binarized-and-1-58-bit-neural-networks-e4209766f6f3.html)

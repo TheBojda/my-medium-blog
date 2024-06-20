@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Analyzing MRI Scans With AI (Tensorflow) Is Easier Than You Think</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Analyzing MRI Scans With AI (Tensorflow) Is Easier Than You Think</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+A few weeks ago, I had an MRI scan. That’s when it occurred to me to wonder how complicated it would be to evaluate MRI images with the…
+</section>
+<section data-field="body" class="e-content">
+<section name="58f5" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="db02" id="db02" class="graf graf--h3 graf--leading graf--title">Analyzing MRI Scans With AI (Tensorflow) Is Easier Than You Think</h3><figure name="604b" id="604b" class="graf graf--figure graf-after--h3"><img class="graf-image" data-image-id="1*hwPPMCQvlJ8hin0Oeag4Tw.png" data-width="1792" data-height="1024" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*hwPPMCQvlJ8hin0Oeag4Tw.png"></figure><p name="b4f6" id="b4f6" class="graf graf--p graf-after--figure">A few weeks ago, I had an MRI scan. That’s when it occurred to me to wonder how complicated it would be to evaluate MRI images with the help of AI. I had always thought that this was a complex problem that only universities and research institutes dealt with. Eventually, I had to realize that it’s actually not that difficult a task, and in fact, there are simple, well-proven methods for this.</p><p name="89c1" id="89c1" class="graf graf--p graf-after--p">Obviously, the first question is how to read MRI scans with Python. Fortunately, most MRI devices produce data in <a href="https://en.wikipedia.org/wiki/DICOM" data-href="https://en.wikipedia.org/wiki/DICOM" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">DICOM</a> format, from which grayscale images can be exported easily. I received my MRI scans on a CD. With the help of ChatGPT, it took just a quarter of an hour to put together a small script that exports the images.</p><figure name="b16f" id="b16f" class="graf graf--figure graf--iframe graf-after--p"><script src="https://gist.github.com/TheBojda/bed8f5f0a191d1995769dc6f2dfd57e3.js"></script></figure><p name="e809" id="e809" class="graf graf--p graf-after--figure">The code expects two parameters. The first is the path to the DICOMDIR file, and the second is a directory where the images will be saved in PNG format.</p><p name="a527" id="a527" class="graf graf--p graf-after--p">To read the DICOM files, we use the <strong class="markup--strong markup--p-strong">Pydicom</strong> library. The structure is loaded using the <strong class="markup--strong markup--p-strong">pydicom.dcmread</strong> function, from which metadata (such as the patient’s name) and studies containing the images can be extracted. The image data can also be read with <strong class="markup--strong markup--p-strong">dcmread</strong>. The raw data are accessible through the <strong class="markup--strong markup--p-strong">pixelarray</strong> field, which the <strong class="markup--strong markup--p-strong">save_image</strong> function converts to PNG.</p><p name="6007" id="6007" class="graf graf--p graf-after--p">The following 512x512 image, for example, depicts my back, which is exported by the above script:</p><figure name="50b6" id="50b6" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*MCzr_PlZjiHtJZ6TqLP5bQ.png" data-width="512" data-height="512" src="https://cdn-images-1.medium.com/max/800/1*MCzr_PlZjiHtJZ6TqLP5bQ.png"></figure><p name="a72c" id="a72c" class="graf graf--p graf-after--figure">Now that we know how easy it is to access MRI scans, let’s see how complicated it is to process them.</p><p name="589e" id="589e" class="graf graf--p graf-after--p">After a quick search, I found an <a href="https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset" data-href="https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">MRI dataset on Kaggle</a> that contains brain MRI scans categorized by tumor type: three groups according to the type of tumor, and a fourth group that includes scans of healthy brains. I also found a <a href="https://www.kaggle.com/code/guslovesmath/tumor-classification-99-7-tensorflow-2-16/notebook" data-href="https://www.kaggle.com/code/guslovesmath/tumor-classification-99-7-tensorflow-2-16/notebook" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">notebook</a> with a neural network that can categorize the images with perfect accuracy. I expected a complex architecture, but to my surprise, it was not complicated at all. It was a standard convolutional network that was able to recognize the tumors so effectively.</p><p name="aa46" id="aa46" class="graf graf--p graf-after--p">One of the first neural network architectures I encountered was the <a href="https://www.tensorflow.org/tutorials/images/cnn" data-href="https://www.tensorflow.org/tutorials/images/cnn" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Tensorflow CNN example</a>, which categorizes images from the well-known CIFAR-10 dataset. The <a href="https://en.wikipedia.org/wiki/CIFAR-10" data-href="https://en.wikipedia.org/wiki/CIFAR-10" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">CIFAR-10</a> dataset contains 60,000 images categorized into ten classes, such as dogs, cats, and the like. The structure of the sample CNN is as follows:</p><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="python" name="23f4" id="23f4" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content">model = models.Sequential()<br />model.add(layers.Conv2D(<span class="hljs-number">32</span>, (<span class="hljs-number">3</span>, <span class="hljs-number">3</span>), activation=<span class="hljs-string">&#x27;relu&#x27;</span>, <br />  input_shape=(<span class="hljs-number">32</span>, <span class="hljs-number">32</span>, <span class="hljs-number">3</span>)))<br />model.add(layers.MaxPooling2D((<span class="hljs-number">2</span>, <span class="hljs-number">2</span>)))<br />model.add(layers.Conv2D(<span class="hljs-number">64</span>, (<span class="hljs-number">3</span>, <span class="hljs-number">3</span>), activation=<span class="hljs-string">&#x27;relu&#x27;</span>))<br />model.add(layers.MaxPooling2D((<span class="hljs-number">2</span>, <span class="hljs-number">2</span>)))<br />model.add(layers.Conv2D(<span class="hljs-number">64</span>, (<span class="hljs-number">3</span>, <span class="hljs-number">3</span>), activation=<span class="hljs-string">&#x27;relu&#x27;</span>))<br />model.add(layers.Flatten())<br />model.add(layers.Dense(<span class="hljs-number">64</span>, activation=<span class="hljs-string">&#x27;relu&#x27;</span>))<br />model.add(layers.Dense(<span class="hljs-number">10</span>))</span></pre><p name="5617" id="5617" class="graf graf--p graf-after--pre">As you can see, the network architecture is quite simple. At the beginning of the network, convolutional and max pooling layers alternate to extract important features. This is followed by 2 dense layers, which classify the images into 10 categories based on the features. It’s not a very complex network, yet it is quite effective at recognizing the images in the CIFAR-10 dataset. (Those interested in a deeper understanding of how the network works can read more in the official <a href="https://www.tensorflow.org/tutorials/images/cnn" data-href="https://www.tensorflow.org/tutorials/images/cnn" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">TensorFlow tutorial</a>.)</p><p name="dbba" id="dbba" class="graf graf--p graf-after--p">After this, let’s look at the structure of the network that recognizes tumors:</p><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="python" name="85c3" id="85c3" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content">model = Sequential([<br />    <span class="hljs-comment"># Input tensor shape</span><br />    Input(shape=image_shape),<br />    <br />    <span class="hljs-comment"># Convolutional layer 1</span><br />    Conv2D(<span class="hljs-number">64</span>, (<span class="hljs-number">5</span>, <span class="hljs-number">5</span>), activation=<span class="hljs-string">&quot;relu&quot;</span>),<br />    MaxPooling2D(pool_size=(<span class="hljs-number">3</span>, <span class="hljs-number">3</span>)),<br /><br />    <span class="hljs-comment"># Convolutional layer 2</span><br />    Conv2D(<span class="hljs-number">64</span>, (<span class="hljs-number">5</span>, <span class="hljs-number">5</span>), activation=<span class="hljs-string">&quot;relu&quot;</span>),<br />    MaxPooling2D(pool_size=(<span class="hljs-number">3</span>, <span class="hljs-number">3</span>)),<br /><br />    <span class="hljs-comment"># Convolutional layer 3</span><br />    Conv2D(<span class="hljs-number">128</span>, (<span class="hljs-number">4</span>, <span class="hljs-number">4</span>), activation=<span class="hljs-string">&quot;relu&quot;</span>),<br />    MaxPooling2D(pool_size=(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>)),<br /><br />    <span class="hljs-comment"># Convolutional layer 4</span><br />    Conv2D(<span class="hljs-number">128</span>, (<span class="hljs-number">4</span>, <span class="hljs-number">4</span>), activation=<span class="hljs-string">&quot;relu&quot;</span>),<br />    MaxPooling2D(pool_size=(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>)),<br />    Flatten(),<br /><br />    <span class="hljs-comment"># Dense layers </span><br />    Dense(<span class="hljs-number">512</span>, activation=<span class="hljs-string">&quot;relu&quot;</span>),<br />    Dense(num_classes, activation=<span class="hljs-string">&quot;softmax&quot;</span>)<br />])</span></pre><p name="7669" id="7669" class="graf graf--p graf-after--pre">It is very similar. Here, instead of three, there are four convolutional layers with larger kernel sizes and more channels, and the dense layer contains 512 neurons instead of 64. This network only differs in the number of parameters from the one we used to recognize cats and dogs. Nevertheless, <strong class="markup--strong markup--p-strong">this network can recognize tumors in MRI images with 99.7% accuracy</strong>. Anyone can <a href="https://www.kaggle.com/code/guslovesmath/tumor-classification-99-7-tensorflow-2-16/notebook" data-href="https://www.kaggle.com/code/guslovesmath/tumor-classification-99-7-tensorflow-2-16/notebook" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">clone the notebook on Kaggle</a> and try out the network themselves.</p><p name="6329" id="6329" class="graf graf--p graf-after--p">I just want to point out how simple it can be to extract and process medical data in certain cases and how problems that seem complex, like detecting brain tumors, can often be quite effectively addressed with simple, traditional solutions.</p><p name="f4b7" id="f4b7" class="graf graf--p graf-after--p graf--trailing">Therefore, I would encourage everyone not to shy away from medical data. As you can see, we are dealing with relatively simple formats, and using relatively simple, well-established technologies (convolutional networks, vision transformers, etc.), a significant impact can be achieved here. If you join an open-source healthcare project in your spare time just as a hobby and can make even a slight improvement to the neural network used, you could potentially save lives!</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@thebojda" class="p-author h-card">Laszlo Fazekas</a> on <a href="https://medium.com/p/8a842683e191"><time class="dt-published" datetime="2024-05-03T18:02:11.399Z">May 3, 2024</time></a>.</p><p><a href="https://medium.com/@thebojda/analyzing-mri-scans-with-ai-tensorflow-is-easier-than-you-think-8a842683e191" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on June 20, 2024.</p></footer></article></body></html>
