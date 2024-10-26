@@ -1,3 +1,6 @@
+**!!! THIS REPO IS ARCHIVED !!!**
+
+I moved my Medium blog archive to my profile page: [https://thebojda.github.io/](https://thebojda.github.io/)
 
 # My Medium Blog
 
