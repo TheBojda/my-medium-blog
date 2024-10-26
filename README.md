@@ -3,6 +3,16 @@
 
 This is a backup of my Medium blog. [https://thebojda.medium.com](https://thebojda.medium.com), generated from: [https://github.com/TheBojda/my-medium-blog](https://github.com/TheBojda/my-medium-blog)
  
+[Blockchain and Decentralization: Paving the Path to True Open-Source AI ](https://thebojda.myethmeta.org/posts/2024-10-21_Blockchain-and-Decentralization--Paving-the-Path-to-True-Open-Source-AI-1d6929b27785.html)
+
+[The Invisible Hand of Web 3: How Profit-Driven Node Operators Ensure the Quality of Ethereum… ](https://thebojda.myethmeta.org/posts/2024-10-07_The-Invisible-Hand-of-Web-3--How-Profit-Driven-Node-Operators-Ensure-the-Quality-of-Ethereum--60991b7929be.html)
+
+[An ID DAO Concept for Blockchain-Based Referendums ](https://thebojda.myethmeta.org/posts/2024-09-30_An-ID-DAO-Concept-for-Blockchain-Based-Referendums-758612e2efdb.html)
+
+[What are Sam Altman’s WorldCoin and WorldID? 
+Proof of Unique Humanness on Blockchain
+](https://thebojda.myethmeta.org/posts/2024-07-29_What-are-Sam-Altman-s-WorldCoin-and-WorldID--920071facb6b.html)
+
 [Boltzmann Brains, Matrioshka Brains, Simulation Hypothesis, and a Concept of God ](https://thebojda.myethmeta.org/posts/2024-06-16_Boltzmann-Brains--Matrioshka-Brains--Simulation-Hypothesis--and-a-Concept-of-God-dcd2ff76d7e4.html)
 
 [The Silicon Hospital, where healing becomes a software problem ](https://thebojda.myethmeta.org/posts/2024-05-18_The-Silicon-Hospital--where-healing-becomes-a-software-problem-57cb9026260a.html)
